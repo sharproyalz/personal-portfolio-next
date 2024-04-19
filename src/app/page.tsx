@@ -1,11 +1,15 @@
 import { AboutSection } from "~/components/about";
+import { BlogSection } from "~/components/blog";
 import { HeroSection } from "~/components/hero";
 
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
+      <body>
+        <HeroSection />
+        <AboutSection />
+        <BlogSection />
+      </body>
     </>
   );
 }

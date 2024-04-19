@@ -12,10 +12,11 @@ const config: Config = {
       colors: {
         // Accent
         primary: "#153C7E",
-        secondary: "EE6C4D",
+        secondary: "#EE6C4D",
 
         // Neutral
         gray: "#d9d9d9",
+        slight_gray: "#3D3B3B",
       },
     },
   },
