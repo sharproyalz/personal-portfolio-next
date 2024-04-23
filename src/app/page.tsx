@@ -11,12 +11,13 @@ export default function HomePage() {
     <>
       <body>
         <Navigation />
-        {/* <HeroSection />
+      
+        <HeroSection />
         <AboutSection />
         <BlogSection />
-
-        <ProjectSection /> */}
+        <ProjectSection />
         <ContactSection />
+        
         <Footer />
       </body>
     </>

@@ -21,7 +21,7 @@ export function ContactSection() {
                 type="text"
                 name="name"
                 id="name"
-                placeholder="John Doe"
+                placeholder="Your name"
                 className="rounded-md border border-primary p-[0.5rem] text-[1.5rem]"
               />
             </div>
@@ -34,7 +34,7 @@ export function ContactSection() {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="john.doe@example.com"
+                placeholder="your.email@example.com"
                 className="rounded-md border border-primary p-[0.5rem] text-[1.5rem]"
               />
             </div>
