@@ -2,7 +2,7 @@ import { Article } from "~/components/blog/article";
 import { LeftAside } from "~/components/blog/left-aside";
 import { RightAside } from "~/components/blog/right-aside";
 import { Footer } from "~/components/footer";
-import Navigation from "~/components/navigation";
+import Navigation from "~/app/_components/navigation";
 
 export default function BlogPage() {
   return (

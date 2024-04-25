@@ -9,8 +9,7 @@ export function ProjectSection() {
           <div className="flex flex-col items-center justify-center">
             <div className="mb-[1rem] text-[3rem]">Project</div>
             <div className="text-[1.5rem]">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consequuntur totam beatae
+              A list of websites that I have developed.
             </div>
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
 
