@@ -1,10 +1,10 @@
 import { AboutSection } from "~/app/_components/about";
 import { BlogSection } from "~/app/_components/blog";
 import { ContactSection } from "~/app/_components/contact";
-import { Footer } from "~/components/footer";
 import { HeroSection } from "~/app/_components/hero";
-import Navigation from "~/app/_components/navigation";
-import { ProjectSection } from "~/components/project";
+import { ProjectSection } from "./_components/project";
+import Navigation from "~/components/navigation";
+import { Footer } from "~/components/footer";
 
 export default function HomePage() {
   return (

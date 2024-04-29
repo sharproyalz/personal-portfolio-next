@@ -6,7 +6,7 @@ export function BlogSection() {
   return (
     <>
       <section className="flex px-12 py-[1rem]">
-        <div className="mx-auto my-0 max-w-screen-xl px-12">
+        <div className="mx-auto my-0 w-full max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="mb-[1rem] text-[3rem]">Blog</div>
             <div className="text-[1.5rem]">
@@ -16,7 +16,7 @@ export function BlogSection() {
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
           </div>
 
-          <div className="mt-[5rem] flex gap-8">
+          <div className="mt-[5rem] flex justify-between gap-8">
             <div className="w-[24rem] rounded-2xl bg-gray p-4">
               <Image
                 src={`/article-banner/sharpie-banner.png`}
@@ -48,6 +48,7 @@ export function BlogSection() {
                 <Link
                   href={`https://www.linkedin.com/posts/vonn-pactol-718a2a283_fullstack-webdeveloper-selfimprovement-activity-7180210384782462976-U5Uw?utm_source=share&utm_medium=member_desktop`}
                   className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                  target="_blank"
                 >
                   Read article
                 </Link>
@@ -87,6 +88,7 @@ export function BlogSection() {
                 <Link
                   href={`https://www.linkedin.com/feed/update/urn:li:linkedInArticle:7168522598362832896/`}
                   className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                  target="_blank"
                 >
                   Read article
                 </Link>
@@ -126,6 +128,7 @@ export function BlogSection() {
                 <Link
                   href={`https://www.linkedin.com/feed/update/urn:li:linkedInArticle:7158059322348826624/`}
                   className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                  target="_blank"
                 >
                   Read article
                 </Link>

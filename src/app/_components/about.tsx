@@ -3,7 +3,7 @@ import Image from "next/image";
 export function AboutSection() {
   return (
     <>
-      <section className="flex h-[100vh] px-12">
+      <section className="flex px-12">
         <div className="mx-auto my-0 max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="my-[1rem] text-[3rem]">About</div>
