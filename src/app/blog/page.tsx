@@ -2,7 +2,7 @@ import { Article } from "~/components/blog/article";
 import { LeftAside } from "~/components/blog/left-aside";
 import { RightAside } from "~/components/blog/right-aside";
 import { Footer } from "~/components/footer";
-import Navigation from "~/app/_components/navigation";
+import Navigation from "~/components/navigation";
 
 export default function BlogPage() {
   return (
@@ -14,7 +14,7 @@ export default function BlogPage() {
 
         <Article />
 
-        <RightAside />
+        {/* <RightAside /> */}
       </div>
 
       <Footer />

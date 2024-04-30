@@ -1,13 +1,12 @@
 export function ContactSection() {
   return (
     <>
-      <section className="flex px-12 py-[1rem]">
+      <section id="contact" className="flex px-12 py-[1rem]">
         <div className="mx-auto my-0 max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="mb-[1rem] text-[3rem]">Contact</div>
             <div className="text-[1.5rem]">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Consequuntur totam beatae
+              Want to connect or make a project with me? Contact me below.
             </div>
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
           </div>

@@ -18,12 +18,16 @@ export function HeroSection() {
               smooth user experiences, I've got you covered. Let's work together
               to bring your vision to life on the web!
             </div>
-            <button
-              type="button"
-              className="mt-[1.5rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
-            >
-              Learn more
-            </button>
+
+            <div className="mt-[1.5rem] ">
+              <Link
+                href={`#about`}
+                className="rounded-lg bg-primary px-[2rem] py-[1rem] font-bold text-white"
+              >
+                Learn more
+              </Link>
+            </div>
+
             <div className="mt-[3rem] flex gap-[1rem]">
               <Link
                 href={`https://github.com/sharproyalz`}

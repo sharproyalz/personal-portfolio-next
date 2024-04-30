@@ -5,7 +5,7 @@ import { truncateWord } from "~/utils/truncateWords";
 export function BlogSection() {
   return (
     <>
-      <section className="flex px-12 py-[1rem]">
+      <section id="blog" className="flex px-12 py-[1rem]">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="mb-[1rem] text-[3rem]">Blog</div>
@@ -19,10 +19,49 @@ export function BlogSection() {
           <div className="mt-[5rem] flex justify-between gap-8">
             <div className="w-[24rem] rounded-2xl bg-gray p-4">
               <Image
+                src={`/article-banner/summary-portfolio.png`}
+                alt="Summary Portfolio Banner"
+                width={800}
+                height={800}
+                className="w-full rounded-md"
+              />
+
+              <div className="mt-[0.5rem] text-[2rem]">
+                {truncateWord(
+                  "Summary of My Digital Career: A Personal Portfolio Website",
+                )}
+              </div>
+
+              <div className="my-[1rem]">April 2024</div>
+
+              {/* Tags */}
+              <div className="mb-[0.5rem] flex gap-[0.5rem]">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+                  Improvement
+                </div>
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+                  Next.js
+                </div>
+              </div>
+
+              <div className="mb-[1rem] h-[2px] bg-white"></div>
+
+              <div className="flex justify-end">
+                <Link
+                  href={`/blog`}
+                  className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                >
+                  Read article
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-[24rem] rounded-2xl bg-gray p-4">
+              <Image
                 src={`/article-banner/sharpie-banner.png`}
                 alt="Sharpie Banner"
-                width={256}
-                height={256}
+                width={800}
+                height={800}
                 className="w-full rounded-md"
               />
 
@@ -59,8 +98,8 @@ export function BlogSection() {
               <Image
                 src={`/article-banner/leetcode-banner.png`}
                 alt="Leetcode Banner"
-                width={256}
-                height={256}
+                width={800}
+                height={800}
                 className="w-full rounded-md"
               />
 
@@ -94,7 +133,7 @@ export function BlogSection() {
                 </Link>
               </div>
             </div>
-
+            {/* 
             <div className="w-[24rem] rounded-2xl bg-gray p-4">
               <Image
                 src={`/article-banner/react-banner.png`}
@@ -113,6 +152,7 @@ export function BlogSection() {
               <div className="my-[1rem]">January 2024</div>
 
               {/* Tags */}
+            {/*
               <div className="mb-[0.5rem] flex gap-[0.5rem]">
                 <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
                   Tutorial
@@ -133,16 +173,17 @@ export function BlogSection() {
                   Read article
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex justify-end">
-            <button
-              type="button"
+            <Link
+              href={`https://www.linkedin.com/in/vonn-pactol-718a2a283/recent-activity/articles/`}
+              target="_blank"
               className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
             >
               View all
-            </button>
+            </Link>
           </div>
         </div>
       </section>

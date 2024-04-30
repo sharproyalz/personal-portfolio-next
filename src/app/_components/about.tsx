@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
     <>
-      <section className="flex px-12">
+      <section id="about" className="flex px-12">
         <div className="mx-auto my-0 max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="my-[1rem] text-[3rem]">About</div>
@@ -34,13 +35,14 @@ export function AboutSection() {
                   development skills.
                 </div>
               </div>
-
-              <button
-                type="button"
-                className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
-              >
-                Contact me
-              </button>
+              <div className="mt-[3rem]">
+                <Link
+                  href={``}
+                  className=" rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
+                >
+                  Contact me
+                </Link>
+              </div>
             </div>
 
             <div className="flex h-[28rem] w-[16rem] items-center rounded-2xl bg-primary">

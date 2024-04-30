@@ -1,4 +1,5 @@
 import { Github, Instagram, LinkIcon, Linkedin, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -35,7 +36,14 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="h-[3rem] w-[3rem] rounded-full bg-gray"></div>
+          <div className="h-[3rem] w-[3rem] rounded-full bg-gray">
+            <Image
+              src={`/sharp-royalz-logo.png`}
+              alt="Sharp Royalz Logo"
+              width={100}
+              height={100}
+            />
+          </div>
 
           <div className="text-white">pactol.vonn@gmail.com</div>
         </div>

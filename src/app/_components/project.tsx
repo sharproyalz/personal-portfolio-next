@@ -4,7 +4,7 @@ import Link from "next/link";
 export function ProjectSection() {
   return (
     <>
-      <section className="flex px-12 py-[1rem]">
+      <section id="project" className="flex px-12 py-[1rem]">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="mb-[1rem] text-[3rem]">Project</div>
@@ -13,7 +13,7 @@ export function ProjectSection() {
             </div>
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
 
-            <div className="grind-col-3 mt-[5rem] grid justify-between gap-8">
+            <div className="mt-[5rem] flex justify-between gap-8">
               <Link
                 href={`https://sds-ss.vercel.app/`}
                 target="_blank"
