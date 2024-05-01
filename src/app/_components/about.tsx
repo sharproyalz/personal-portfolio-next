@@ -37,7 +37,7 @@ export function AboutSection() {
               </div>
               <div className="mt-[3rem]">
                 <Link
-                  href={``}
+                  href={`#contact`}
                   className=" rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
                 >
                   Contact me

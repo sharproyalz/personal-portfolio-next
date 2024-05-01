@@ -12,12 +12,13 @@ export function ProjectSection() {
               A list of websites that I have developed.
             </div>
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
+          </div>
 
             <div className="mt-[5rem] flex justify-between gap-8">
               <Link
                 href={`https://sds-ss.vercel.app/`}
                 target="_blank"
-                className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+                className="group flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
               >
                 <div className="self-end text-xs">
                   October 2023 - January 2024
@@ -25,8 +26,8 @@ export function ProjectSection() {
                 <Image
                   src={`/capstone-project-banner.png`}
                   alt={`Sharpie Banner`}
-                  height={256}
-                  width={384}
+                  height={800}
+                  width={800}
                   className=""
                 />
                 <div className="text-[2rem] group-hover:text-primary group-hover:underline">
@@ -41,15 +42,15 @@ export function ProjectSection() {
               <Link
                 href={`https://sharpie-store.vercel.app/`}
                 target="_blank"
-                className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+                className="group flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
               >
                 <div className="self-end text-xs">March 2024</div>
 
                 <Image
                   src={`/sharpie-banner.png`}
                   alt={`Sharpie Banner`}
-                  height={256}
-                  width={384}
+                  height={800}
+                  width={800}
                   className=""
                 />
 
@@ -63,15 +64,15 @@ export function ProjectSection() {
               <Link
                 href={`https://background-changer-one.vercel.app/`}
                 target="_blank"
-                className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+                className="group flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
               >
                 <div className="self-end text-xs">December 2023</div>
 
                 <Image
                   src={`/background-changer-banner.png`}
                   alt={`Sharpie Banner`}
-                  height={256}
-                  width={384}
+                  height={800}
+                  width={800}
                   className=""
                 />
                 <div className="text-[2rem] group-hover:text-primary group-hover:underline">
@@ -169,7 +170,7 @@ export function ProjectSection() {
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
     </>
   );
