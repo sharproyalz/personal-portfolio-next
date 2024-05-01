@@ -38,7 +38,7 @@ export function AboutSection() {
               <div className="mt-[3rem]">
                 <Link
                   href={`#contact`}
-                  className=" rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
+                  className=" rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
                 >
                   Contact me
                 </Link>

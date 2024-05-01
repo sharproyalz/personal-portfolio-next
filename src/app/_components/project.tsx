@@ -85,7 +85,7 @@ export function ProjectSection() {
             <div className="flex w-full justify-end">
               <Link
                 href={`/projects`}
-                className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
+                className="mt-[3rem] rounded-lg hover:bg-primary/90 active:scale-95 bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
               >
                 View all
               </Link>

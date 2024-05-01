@@ -15,22 +15,22 @@ export default function Navigation() {
             />
           </Link>
           <ul className="flex gap-[2rem]">
-            <li className="text-2xl ">
+            <li className="text-2xl hover:text-primary">
               <Link href={`/#about`}> About</Link>
             </li>
-            <li className="text-2xl ">
+            <li className="text-2xl hover:text-primary">
               <Link href={`/#project`}>Project</Link>
             </li>
-            <li className="text-2xl ">
+            <li className="text-2xl hover:text-primary">
               <Link href={`/#blog`}>Blog</Link>
             </li>
-            <li className="text-2xl ">
+            <li className="text-2xl hover:text-primary">
               <Link href={`/#contact`}>Contact</Link>
             </li>
           </ul>
           <button
             type="button"
-            className="rounded-lg bg-primary px-[1.5rem] py-[0.5rem] font-bold text-white"
+            className="rounded-lg bg-primary px-[1.5rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
           >
             Hire me
           </button>

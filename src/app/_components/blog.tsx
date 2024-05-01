@@ -49,7 +49,7 @@ export function BlogSection() {
               <div className="flex justify-end">
                 <Link
                   href={`/blog`}
-                  className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                  className=" w-fit rounded-2xl bg-secondary px-[1rem] hover:bg-secondary/90 active:scale-95 py-[0.25rem] font-bold text-white"
                 >
                   Read article
                 </Link>
@@ -86,7 +86,7 @@ export function BlogSection() {
               <div className="flex justify-end">
                 <Link
                   href={`https://www.linkedin.com/posts/vonn-pactol-718a2a283_fullstack-webdeveloper-selfimprovement-activity-7180210384782462976-U5Uw?utm_source=share&utm_medium=member_desktop`}
-                  className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                  className="hover:bg-secondary/90 active:scale-95 w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
                   target="_blank"
                 >
                   Read article
@@ -126,7 +126,7 @@ export function BlogSection() {
               <div className="flex justify-end">
                 <Link
                   href={`https://www.linkedin.com/feed/update/urn:li:linkedInArticle:7168522598362832896/`}
-                  className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
+                  className="hover:bg-secondary/90 active:scale-95 w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white"
                   target="_blank"
                 >
                   Read article
@@ -180,7 +180,7 @@ export function BlogSection() {
             <Link
               href={`https://www.linkedin.com/in/vonn-pactol-718a2a283/recent-activity/articles/`}
               target="_blank"
-              className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
+              className="mt-[3rem] rounded-lg hover:bg-primary/90 active:scale-95 bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
             >
               View all
             </Link>

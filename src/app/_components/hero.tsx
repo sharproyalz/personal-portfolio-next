@@ -22,7 +22,7 @@ export function HeroSection() {
             <div className="mt-[1.5rem] ">
               <Link
                 href={`#about`}
-                className="rounded-lg bg-primary px-[2rem] py-[1rem] font-bold text-white"
+                className="rounded-lg bg-primary px-[2rem] py-[1rem] font-bold text-white hover:bg-primary/90 active:scale-95"
               >
                 Learn more
               </Link>

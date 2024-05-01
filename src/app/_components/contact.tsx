@@ -54,7 +54,7 @@ export function ContactSection() {
             <div className="flex w-full justify-center">
               <button
                 type="button"
-                className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white"
+                className="mt-[1rem] rounded-lg bg-primary px-[1rem] hover:bg-primary/90 active:scale-95 py-[0.5rem] font-bold text-white"
               >
                 Send message
               </button>
