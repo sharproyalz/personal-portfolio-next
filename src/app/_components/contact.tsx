@@ -1,10 +1,10 @@
 export function ContactSection() {
   return (
     <>
-      <section id="contact" className="flex px-12 py-[1rem]">
+      <section id="contact" className="flex px-12 py-[1rem] ">
         <div className="mx-auto my-0 max-w-screen-xl px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="mb-[1rem] text-[3rem]">Contact</div>
+            <div className="mb-[1rem] text-[3rem] dark:text-gray">Contact</div>
             <div className="text-[1.5rem]">
               Want to connect or make a project with me? Contact me below.
             </div>
@@ -21,7 +21,7 @@ export function ContactSection() {
                 name="name"
                 id="name"
                 placeholder="Your name"
-                className="rounded-md border border-primary p-[0.5rem] text-[1.5rem]"
+                className="dark:bg-card rounded-md border border-primary p-[0.5rem] text-[1.5rem] dark:text-gray dark:outline-none dark:focus:outline-gray"
               />
             </div>
 
@@ -34,7 +34,8 @@ export function ContactSection() {
                 name="email"
                 id="email"
                 placeholder="your.email@example.com"
-                className="rounded-md border border-primary p-[0.5rem] text-[1.5rem]"
+                className="dark:bg-card rounded-md border border-primary p-[0.5rem] text-[1.5rem]
+                dark:text-gray dark:outline-none dark:focus:outline-gray"
               />
             </div>
 
@@ -47,14 +48,15 @@ export function ContactSection() {
                 id="message"
                 placeholder="Your message here"
                 rows={3}
-                className="rounded-md border border-primary p-[0.5rem] text-[1.5rem]"
+                className="dark:bg-card rounded-md border border-primary p-[0.5rem] text-[1.5rem]
+                dark:text-gray dark:outline-none dark:focus:outline-gray"
               ></textarea>
             </div>
 
             <div className="flex w-full justify-center">
               <button
                 type="button"
-                className="mt-[1rem] rounded-lg bg-primary px-[1rem] hover:bg-primary/90 active:scale-95 py-[0.5rem] font-bold text-white"
+                className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
               >
                 Send message
               </button>

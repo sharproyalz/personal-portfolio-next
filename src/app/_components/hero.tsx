@@ -5,14 +5,16 @@ import Link from "next/link";
 export function HeroSection() {
   return (
     <>
-      <section className="flex h-[90vh] items-center px-12">
-        <div className="relative mx-auto my-0 flex max-w-screen-xl items-center justify-between px-12">
-          <div className="w-[50%]">
-            <div className="text-[4rem] tracking-tighter">Hi, I am Vonn</div>
-            <div className="text-[4rem] tracking-tighter">
+      <section className="flex items-center px-4 md:px-12">
+        <div className="relative mx-auto my-0 flex max-w-screen-xl flex-col items-center justify-between px-4 md:flex-row md:px-12">
+          <div className="w-full md:w-[50%]">
+            <div className="text-[3rem] tracking-tighter md:text-[4rem] dark:text-gray">
+              Hi, I am Vonn
+            </div>
+            <div className="text-[3rem] tracking-tighter md:text-[4rem] dark:text-gray">
               I’m a Web Developer
             </div>
-            <div className="mt-[1rem] text-justify text-[1.5rem]">
+            <div className="mt-[1rem] text-justify text-[1rem] md:text-[1.5rem] ">
               Hello there! I'm Vonn, a web developer here to make your online
               dreams a reality. Whether it's creating sleek designs or ensuring
               smooth user experiences, I've got you covered. Let's work together
@@ -22,7 +24,7 @@ export function HeroSection() {
             <div className="mt-[1.5rem] ">
               <Link
                 href={`#about`}
-                className="rounded-lg bg-primary px-[2rem] py-[1rem] font-bold text-white hover:bg-primary/90 active:scale-95"
+                className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95 md:px-[2rem] md:py-[1rem]"
               >
                 Learn more
               </Link>
@@ -56,7 +58,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="absolute right-0 w-[48rem]">
+          <div className="-z-10 mt-[2rem] w-full md:absolute md:right-0 md:mt-0 md:max-w-[32rem]">
             <Image src={`/hero.png`} alt="Hero" width={`768`} height={"768"} />
           </div>
         </div>

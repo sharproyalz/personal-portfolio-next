@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navigation from "~/components/navigation";
 import "~/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -12,8 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-[#ffffff]">{children}</body>
+    // Remove 'dark' to switch on light mode
+    <html lang="en" className="dark">
+      <body className="bg-[#ffffff] text-[12px]  md:text-[16px] dark:bg-[#111111] dark:text-[#999999]">
+        <Navigation />
+
+        {children}
+      </body>
     </html>
   );
 }
