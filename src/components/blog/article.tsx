@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Article() {
   return (
-    <article className="col-span-3 px-[1rem] ">
+    <article className="col-span-5 px-[1rem] md:col-span-3 ">
       <Image
         src={`/article-banner/summary-portfolio.png`}
         alt="Summary Portfolio Banner"

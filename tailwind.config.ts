@@ -17,6 +17,7 @@ const config: Config = {
         // Neutral
         gray: "#d9d9d9",
         slight_gray: "#3D3B3B",
+        dusty_gray: "#999999",
 
         // Dark Mode
         card: "#1E1E1E",
