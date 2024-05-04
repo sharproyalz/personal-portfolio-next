@@ -6,8 +6,8 @@ export function HeroSection() {
   return (
     <>
       <section className="flex items-center px-4 md:px-12">
-        <div className="relative mx-auto my-0 flex max-w-screen-xl flex-col items-center justify-between px-4 md:flex-row md:px-12">
-          <div className="w-full md:w-[50%]">
+        <div className="relative mx-auto my-0 flex max-w-screen-xl flex-col items-center justify-between px-4 lg:flex-row lg:px-12">
+          <div className="w-full lg:w-[50%]">
             <div className="text-[3rem] tracking-tighter md:text-[4rem] dark:text-gray">
               Hi, I am Vonn
             </div>
@@ -58,7 +58,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="-z-10 mt-[2rem] w-full md:absolute md:right-0 md:mt-0 md:max-w-[32rem]">
+          <div className="-z-10 mt-[2rem] w-full lg:absolute lg:right-0 lg:mt-0 lg:max-w-[32rem]">
             <Image src={`/hero.png`} alt="Hero" width={`768`} height={"768"} />
           </div>
         </div>

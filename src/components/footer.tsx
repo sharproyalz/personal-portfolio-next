@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <>
       <footer className="mt-[8rem] w-full bg-primary">
-        <div className="mx-auto my-0 flex max-w-screen-xl items-center justify-between px-12 py-[2rem]">
+        <div className="mx-auto my-0 flex max-w-screen-xl flex-col items-center justify-between gap-4 px-12 py-[2rem] md:flex-row">
           <div className="flex gap-[1rem] ">
             <div className=" flex items-center gap-[1rem]">
               <Link

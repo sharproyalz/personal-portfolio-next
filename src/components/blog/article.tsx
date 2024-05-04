@@ -11,7 +11,7 @@ export function Article() {
         height={800}
       />
 
-      <div className="mt-[1.5rem] text-[2.5rem] font-bold leading-10">
+      <div className="mt-[1.5rem] text-[2.5rem] font-bold leading-10 dark:text-gray">
         Summary of My Digital Career: A Personal Portfolio Website
       </div>
 

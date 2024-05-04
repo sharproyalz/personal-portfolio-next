@@ -4,30 +4,32 @@ import Link from "next/link";
 export function AboutSection() {
   return (
     <>
-      <section id="about" className="flex px-12 ">
-        <div className="mx-auto my-0 max-w-screen-xl px-12">
+      <section id="about" className="mt-[4rem] flex px-4 md:px-12 ">
+        <div className="mx-auto my-0 max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[3rem] dark:text-gray">About</div>
-            <div className="text-[1.5rem]">
+            <div className="my-[1rem] text-[2rem] md:text-[3rem] dark:text-gray">
+              About
+            </div>
+            <div className="text-[1rem] md:text-[1.5rem]">
               The brief overview of my personal information.
             </div>
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
           </div>
 
-          <div className="mt-[5rem] flex items-center justify-between">
-            <div className="w-[64%]">
-              <div className="text-[2.5rem] dark:text-gray">
+          <div className="mt-[5rem] flex  flex-col items-center justify-between lg:flex-row">
+            <div className="w-full lg:w-[64%]">
+              <div className="text-[1.5rem] md:text-[2.5rem] dark:text-gray">
                 Aspiring Full-stack Developer: Skills and Ambitions
               </div>
               <div className="mt-[1rem] h-[2px] w-[20%] bg-primary"></div>
 
               <div className="mt-[3rem] flex flex-col gap-[3rem] text-justify">
-                <div className="text-[1.5rem]">
+                <div className="text-[1rem] md:text-[1.5rem]">
                   Hi I am Vonn, a BS-IT student currently studying at Cavite
                   State University. I am committed to becoming a Full-stack
                   Developer.
                 </div>
-                <div className="text-[1.5rem]">
+                <div className="text-[1rem] md:text-[1.5rem]">
                   My frontend technologies include Figma, Next.js, and Tailwind,
                   complemented by backend technologies such as Node.js (Prisma,
                   Zod, etc.), Postgres, and MySQL. I am continuously refining my
@@ -35,6 +37,7 @@ export function AboutSection() {
                   development skills.
                 </div>
               </div>
+
               <div className="mt-[3rem]">
                 <Link
                   href={`#contact`}
@@ -45,8 +48,8 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="flex h-[28rem] w-[16rem] items-center rounded-2xl bg-primary">
-              <div className="dark:bg-card flex h-[26rem] w-[16rem] -translate-x-5 items-center justify-center rounded-2xl bg-gray">
+            <div className="mt-[4rem] flex h-[28rem] w-[16rem] items-center rounded-2xl bg-primary md:mt-0">
+              <div className="flex h-[26rem] w-[16rem] -translate-x-5 items-center justify-center rounded-2xl bg-gray dark:bg-card">
                 <Image
                   src={`/computer.png`}
                   alt="Computer"

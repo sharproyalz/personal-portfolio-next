@@ -9,15 +9,13 @@ import { Footer } from "~/components/footer";
 export default function HomePage() {
   return (
     <>
-      <body>
+      <main>
         <HeroSection />
-        {/* <AboutSection />
+        <AboutSection />
         <BlogSection />
         <ProjectSection />
         <ContactSection />
-
-        <Footer /> */}
-      </body>
+      </main>
     </>
   );
 }
