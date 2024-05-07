@@ -4,10 +4,12 @@ import Link from "next/link";
 
 export function LeftAside() {
   return (
-    <aside className="fixed top-0 h-[100vh] w-[80%] border-r-[1px] bg-card p-4 text-[1.5rem] md:static md:col-span-1 md:block md:h-fit md:border-r-2 md:border-gray md:bg-transparent md:pe-[1rem]">
+    <aside
+      className={`fixed top-0 hidden h-[100vh] w-[80%] border-r-[1px] bg-card p-4 text-[1.5rem] md:static md:col-span-1 md:block md:h-fit md:border-r-2 md:border-gray md:bg-transparent md:pe-[1rem]`}
+    >
       <button
         type="button"
-        className="active:border-dusty_gray absolute right-4 top-4 rounded-sm active:border md:hidden"
+        className="absolute right-4 top-4 rounded-sm active:border active:border-dusty_gray md:hidden"
       >
         <X />
       </button>

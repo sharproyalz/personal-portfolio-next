@@ -1,14 +1,22 @@
-import { Article } from "~/components/blog/article";
-import { LeftAside } from "~/components/blog/left-aside";
-import { RightAside } from "~/components/blog/right-aside";
+import { Article } from "~/app/blog/_components/article";
 import { Footer } from "~/components/footer";
 import Navigation from "~/components/navigation";
+import { LeftAside } from "./_components/left-sidebar";
+import { NavBarAndSideBar } from "./_components/navbar-and-sidebar";
 
 export default function BlogPage() {
   return (
     <>
-      <div className="mx-auto my-[4rem] grid max-w-screen-xl grid-cols-5 text-justify leading-8">
-        <LeftAside />
+      <div className="md:hidden">
+        <NavBarAndSideBar />
+      </div>
+      <div className="hidden md:block">
+        <Navigation />
+      </div>
+      <div className="mx-auto my-[4rem] max-w-screen-xl text-justify leading-8 md:grid md:grid-cols-5">
+        <div className="hidden md:block">
+          <LeftAside />
+        </div>
 
         <Article />
 

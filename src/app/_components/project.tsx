@@ -30,7 +30,7 @@ export function ProjectSection() {
                 alt={`Sharpie Banner`}
                 height={800}
                 width={800}
-                className="w-full md:w-fit"
+                className="w-full"
               />
               <div className="text-[1rem] group-hover:text-primary group-hover:underline md:text-[2rem] dark:text-gray">
                 Capstone Project
@@ -53,7 +53,7 @@ export function ProjectSection() {
                 alt={`Sharpie Banner`}
                 height={800}
                 width={800}
-                className="w-full md:w-fit"
+                className="w-full"
               />
 
               <div className="text-[1rem] text-gray group-hover:text-primary group-hover:underline md:text-[2rem]">
@@ -75,7 +75,7 @@ export function ProjectSection() {
                 alt={`Sharpie Banner`}
                 height={800}
                 width={800}
-                className="w-full md:w-fit"
+                className="w-full"
               />
               <div className="text-[1rem] text-gray group-hover:text-primary group-hover:underline md:text-[2rem]">
                 Background Changer

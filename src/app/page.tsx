@@ -10,6 +10,8 @@ export default function HomePage() {
   return (
     <>
       <main>
+        <Navigation />
+
         <HeroSection />
         <AboutSection />
         <BlogSection />

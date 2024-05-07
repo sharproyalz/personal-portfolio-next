@@ -3,15 +3,29 @@
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Dispatch, SetStateAction, useState } from "react";
 
-export default function Navigation() {
+export default function Navigation({
+  setIsOpen = (isOpen: boolean) => {},
+}: {
+  setIsOpen?: (isOpen: boolean) => void;
+}) {
   return (
     <>
-      <nav className="px-12 py-[1rem]">
-        <div className="flex items-center justify-between ">
+      <nav className={`px-4 py-[1rem] md:px-12`}>
+        <div className="flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => setIsOpen(true)}
+            className="md:hidden"
+          >
+            <Menu />
+          </button>
+
           {/* Logo */}
-          <Link href={`/`} className="h-[3rem] w-[3rem] rounded-full">
+          <Link
+            href={`/`}
+            className="hidden h-[3rem] w-[3rem] rounded-full md:block"
+          >
             <Image
               src={`/sharp-royalz-logo.png`}
               alt="Sharp Royalz Logo"
