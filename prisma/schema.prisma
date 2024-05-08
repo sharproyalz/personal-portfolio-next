@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Blog {
+  id      String    @id @default(cuid())
+  title   String
+  image   String
+  imageId String
+  month   Int
+  year    Int
+  tags    BlogTag[]
+}
+
+model BlogTag {
+  id     String @id @default(cuid())
+  name   Blog   @relation(fields: [nameId], references: [id])
+  nameId String
+}
+
+model Project {
+  id         String       @id @default(cuid())
+  title      String
+  monthStart Int
+  yearStart  Int
+  monthEnd   Int?
+  yearEnd    Int?
+  image      String
+  imageId    String
+  tags       ProjectTag[]
+}
+
+model ProjectTag {
+  id     String  @id @default(cuid())
+  name   Project @relation(fields: [nameId], references: [id])
+  nameId String
+}
+
+model Contact {
+  id      String @id @default(cuid())
+  name    String
+  email   String
+  message String
+}
