@@ -24,9 +24,10 @@ model Blog {
 }
 
 model BlogTag {
-  id     String @id @default(cuid())
-  name   Blog   @relation(fields: [nameId], references: [id])
-  nameId String
+  id     String  @id @default(cuid())
+  name   String
+  blog   Blog?   @relation(fields: [blogId], references: [id])
+  blogId String?
 }
 
 model Project {
@@ -42,9 +43,10 @@ model Project {
 }
 
 model ProjectTag {
-  id     String  @id @default(cuid())
-  name   Project @relation(fields: [nameId], references: [id])
-  nameId String
+  id        String   @id @default(cuid())
+  name      String
+  project   Project? @relation(fields: [projectId], references: [id])
+  projectId String?
 }
 
 model Contact {
