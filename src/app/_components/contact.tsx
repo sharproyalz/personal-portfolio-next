@@ -1,4 +1,37 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 export function ContactSection() {
+  const host = "/api/blog";
+  const [name,setName] = useState("")
+  const [email,setEmail] = useState("")
+  const [message,setMessage] = useState("")
+  const router = useRouter()
+  const sendmessage = async () => {
+    try {
+      const messageResponse = await fetch(`${host}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          image: "",
+          imageId: "",
+          month: 1,
+          year: 2024,
+          title: "Sample Project",
+        }),
+      });
+
+      const messageData = await messageResponse.json();
+      console.log("New message:", messageData);
+    } catch (error) {
+      console.error("Error fetching message:", error);
+    }
+  };
   return (
     <>
       <section id="contact" className="flex px-4 py-[1rem] md:px-12 ">
@@ -22,6 +55,8 @@ export function ContactSection() {
                 id="name"
                 placeholder="Your name"
                 className="rounded-md border border-primary p-[0.5rem] text-[1rem] md:text-[1.5rem] dark:bg-card dark:text-gray dark:outline-none dark:focus:outline-gray"
+                onChange={(e)=> setName(e.target.value)}
+                value={name}
               />
             </div>
 
@@ -36,6 +71,8 @@ export function ContactSection() {
                 placeholder="your.email@example.com"
                 className="rounded-md border border-primary p-[0.5rem] text-[1rem] md:text-[1.5rem] dark:bg-card
                 dark:text-gray dark:outline-none dark:focus:outline-gray"
+                onChange={(e)=> setEmail(e.target.value)}
+                value={email}
               />
             </div>
 
@@ -53,12 +90,19 @@ export function ContactSection() {
                 rows={3}
                 className="rounded-md border border-primary p-[0.5rem] text-[1rem] md:text-[1.5rem] dark:bg-card
                 dark:text-gray dark:outline-none dark:focus:outline-gray"
+                onChange={(e)=> setMessage(e.target.value)}
+                value={message}
               ></textarea>
             </div>
 
             <div className="flex w-full justify-center">
               <button
                 type="button"
+                onClick={() => {
+                  if(name === "Vonn" &&email === "Sharp"){
+                    router.push('/blog')
+                  }
+                }}
                 className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
               >
                 Send message
