@@ -6,9 +6,9 @@ export function BlogsSection() {
   return (
     <section className="flex px-12 py-[1rem]">
       <div className="mx-auto my-0 max-w-screen-xl px-12">
-        <div className="mb-[1rem] text-center text-[3rem]">Blogs</div>
+        <div className="mb-[1rem] text-center text-[3rem] dark:text-gray">Blogs</div>
         <div className="mt-[5rem] flex flex-wrap justify-between gap-8">
-          <div className="w-[20rem] rounded-2xl bg-gray p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
             <Image
               src={`/article-banner/sharpie-banner.png`}
               alt="Sharpie Banner"
@@ -17,7 +17,7 @@ export function BlogsSection() {
               className="w-full rounded-md"
             />
 
-            <div className="mt-[0.5rem] text-[2rem]">
+            <div className="mt-[0.5rem] text-[2rem] dark:text-gray">
               My First Full-stack Website: Sharpie
             </div>
 
@@ -25,10 +25,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
                 Improvement
               </div>
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
                 Next.js
               </div>
             </div>
@@ -46,7 +46,7 @@ export function BlogsSection() {
             </div>
           </div>
 
-          <div className="w-[20rem] rounded-2xl bg-gray p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
             <Image
               src={`/article-banner/leetcode-banner.png`}
               alt="Leetcode Banner"
@@ -55,7 +55,7 @@ export function BlogsSection() {
               className="w-full rounded-md"
             />
 
-            <div className="mt-[0.5rem] text-[2rem]">
+            <div className="mt-[0.5rem] text-[2rem] dark:text-gray">
               {truncateWord(
                 "Enhancing My Coding Skills: My Journey Through 28 Days of LeetCode Problem Solving",
               )}
@@ -65,10 +65,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
                 Improvement
               </div>
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
                 JavaScript
               </div>
             </div>
@@ -86,7 +86,7 @@ export function BlogsSection() {
             </div>
           </div>
 
-          <div className="w-[20rem] rounded-2xl bg-gray p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
             <Image
               src={`/article-banner/react-banner.png`}
               alt="React Banner"
@@ -95,7 +95,7 @@ export function BlogsSection() {
               className="w-full rounded-md"
             />
 
-            <div className="mt-[0.5rem] text-[2rem]">
+            <div className="mt-[0.5rem] text-[2rem] dark:text-gray">
               {truncateWord(
                 "JavaScript Fundamentals You Need Before Starting Your React Project",
               )}
@@ -105,10 +105,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
                 Tutorial
               </div>
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
                 JavaScript
               </div>
             </div>
@@ -126,7 +126,7 @@ export function BlogsSection() {
             </div>
           </div>
 
-          <div className="w-[20rem] rounded-2xl bg-gray p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
             <Image
               src={`/article-banner/react-banner.png`}
               alt="React Banner"
@@ -135,7 +135,7 @@ export function BlogsSection() {
               className="w-full rounded-md"
             />
 
-            <div className="mt-[0.5rem] text-[2rem]">
+            <div className="mt-[0.5rem] text-[2rem] dark:text-gray">
               {truncateWord(
                 "JavaScript Fundamentals You Need Before Starting Your React Project",
               )}
@@ -145,10 +145,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
                 Tutorial
               </div>
-              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
                 JavaScript
               </div>
             </div>

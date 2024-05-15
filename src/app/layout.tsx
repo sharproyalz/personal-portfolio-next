@@ -18,8 +18,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="bg-[#ffffff] text-[12px]  md:text-[16px] dark:bg-[#111111] dark:text-[#999999]">
         {children}
-
-        <Footer />
       </body>
     </html>
   );
