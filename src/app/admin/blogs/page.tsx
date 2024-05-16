@@ -1,11 +1,5 @@
-import { BlogsView } from "~/app/admin/blogs/_components/blogs";
+import { BlogsView } from "~/app/admin/blogs/_components/blogs-view";
 
 export default function ProjectsPage() {
-  return (
-    <>
-      <div>
-        <BlogsView />
-      </div>
-    </>
-  );
+  return <BlogsView />;
 }

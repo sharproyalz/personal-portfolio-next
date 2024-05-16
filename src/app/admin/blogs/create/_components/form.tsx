@@ -7,7 +7,7 @@ export function ProjectForm() {
 
   return (
     <>
-      <form className="mx-auto max-w-screen-lg">
+      <form className="mx-auto max-w-screen-lg px-12">
         <div className="mb-[2rem] text-center text-[3rem] text-gray">
           Create Blog
         </div>

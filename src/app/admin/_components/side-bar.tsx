@@ -8,7 +8,7 @@ export function SideBar() {
   return (
     <>
       <aside className="hidden p-[2rem] shadow-md md:block md:w-72">
-        <ul className="sticky top-[6.5rem]">
+        <ul className="sticky top-[2rem]">
           <li className="">
             <Link className={``} href={`/admin/blogs`}>
               <div

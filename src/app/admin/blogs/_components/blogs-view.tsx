@@ -12,15 +12,15 @@ export function BlogsView() {
         </div>
 
         <div className="mt-[5rem] flex w-full flex-wrap justify-evenly gap-8 ">
-          <button
-            type="button"
+          <Link
+            href={`/admin/blogs/create`}
             className="flex w-[20rem] items-center justify-center gap-4 rounded-2xl border border-card bg-gray p-4 dark:bg-transparent dark:hover:bg-card dark:hover:text-gray"
           >
             Add
             <div>
               <Plus />
             </div>
-          </button>
+          </Link>
           {Array.from({ length: 3 }).map((arr, arrIdx) => (
             <div
               key={arrIdx}

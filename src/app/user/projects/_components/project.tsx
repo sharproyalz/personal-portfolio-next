@@ -12,7 +12,7 @@ export function ProjectsSection() {
             <Link
               href={`https://sharpie-store.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">March 2024</div>
 
@@ -24,7 +24,7 @@ export function ProjectsSection() {
                 className=""
               />
 
-              <div className="text-[2rem] group-hover:text-primary group-hover:underline">
+              <div className="text-[2rem] group-hover:text-primary group-hover:underline dark:text-gray">
                 Ecommerce
               </div>
 
@@ -34,7 +34,7 @@ export function ProjectsSection() {
             <Link
               href={`https://sds-ss.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">
                 October 2023 - January 2024
@@ -46,7 +46,7 @@ export function ProjectsSection() {
                 width={384}
                 className=""
               />
-              <div className="text-[2rem] group-hover:text-primary group-hover:underline">
+              <div className="text-[2rem] group-hover:text-primary group-hover:underline dark:text-gray">
                 Capstone Project
               </div>
 
@@ -58,7 +58,7 @@ export function ProjectsSection() {
             <Link
               href={`https://css-position-playground.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">December 2023</div>
 
@@ -69,7 +69,7 @@ export function ProjectsSection() {
                 width={384}
                 className=""
               />
-              <div className="text-[1.5rem] group-hover:text-primary group-hover:underline">
+              <div className="text-[1.5rem] group-hover:text-primary group-hover:underline dark:text-gray">
                 CSS Position Playground
               </div>
 
@@ -79,7 +79,7 @@ export function ProjectsSection() {
             <Link
               href={`https://background-changer-one.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">November 2023</div>
 
@@ -90,7 +90,7 @@ export function ProjectsSection() {
                 width={384}
                 className=""
               />
-              <div className="text-[2rem] group-hover:text-primary group-hover:underline">
+              <div className="text-[2rem] group-hover:text-primary group-hover:underline dark:text-gray">
                 Background Changer
               </div>
               <div className="">JavaScript</div>
@@ -99,7 +99,7 @@ export function ProjectsSection() {
             <Link
               href={`https://scientific-calculator-navy.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">September 2023</div>
               <Image
@@ -109,7 +109,7 @@ export function ProjectsSection() {
                 width={384}
                 className=""
               />
-              <div className="text-[2rem] group-hover:text-primary group-hover:underline">
+              <div className="text-[2rem] group-hover:text-primary group-hover:underline dark:text-gray">
                 Scientific Calculator
               </div>
               <div className="">JavaScript</div>
