@@ -1,9 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { z } from "zod";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { schemas } from "~/zod-schemas";
+import { useRouter } from "next/navigation";
 
-export function ProjectForm() {
+type Inputs = z.infer<typeof schemas.blog.create>;
+
+export function BlogForm() {
   const [text, setText] = useState(``);
+  const router = useRouter();
+  const blogForm = useForm<Inputs>();
 
   return (
     <>
@@ -37,6 +45,21 @@ export function ProjectForm() {
               placeholder="Type your article title here"
               className="w-full p-4 text-2xl font-bold text-black"
             ></textarea>
+          </div>
+
+          {/* Tags */}
+          <div>
+            <div className="font-bold text-gray">Tags</div>
+            <div className="flex gap-8">
+              {Array.from({ length: 3 }).map((arr, arrIdx) => (
+                <div key={arrIdx} className="flex gap-2">
+                  <input type="checkbox" name="sharp" id="" />
+                  <label htmlFor="blog-title" className="">
+                    Improvement
+                  </label>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Article */}
