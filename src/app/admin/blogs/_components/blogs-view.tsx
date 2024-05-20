@@ -1,9 +1,17 @@
+"use client";
+
 import { Plus } from "lucide-react";
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
+import { api } from "~/trpc/react";
+import { getMonthName } from "~/utils/get-month-name";
 import { truncateWord } from "~/utils/truncateWords";
 
 export function BlogsView() {
+  const getBlogsQuery = api.blog.getAll.useQuery();
+  const blogs = getBlogsQuery.data;
+
   return (
     <section className="flex py-[1rem]">
       <div className="w-full px-12">
@@ -21,28 +29,28 @@ export function BlogsView() {
               <Plus />
             </div>
           </Link>
-          {Array.from({ length: 3 }).map((arr, arrIdx) => (
+          {blogs?.map((blog) => (
             <div
-              key={arrIdx}
+              key={blog.id}
               className="w-[20rem] rounded-2xl bg-gray p-4 dark:bg-card"
             >
-              <div className="w-[18rem]">
-                <Image
-                  src={`/article-banner/react-banner.png`}
-                  alt="React Banner"
-                  width={288}
-                  height={256}
+              <div className="object-fit mx-auto flex h-[12rem] w-[18rem]">
+                <CldImage
+                  width="288"
+                  height="192"
+                  src={blog.imageId}
+                  alt="Article Banner"
                   className=""
                 />
               </div>
 
               <div className="mt-4 text-[2rem] dark:text-gray">
-                {truncateWord(
-                  "JavaScript Fundamentals You Need Before Starting Your React Project",
-                )}
+                {truncateWord(blog.title)}
               </div>
 
-              <div className="my-[1rem]">January 2024</div>
+              <div className="my-[1rem]">
+                {getMonthName(blog.month)} {blog.year}
+              </div>
 
               {/* Tags */}
               <div className="mb-[0.5rem] flex gap-[0.5rem]">

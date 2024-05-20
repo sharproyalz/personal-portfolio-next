@@ -16,6 +16,7 @@ datasource db {
 model Blog {
   id      String    @id @default(cuid())
   title   String
+  article String
   image   String
   imageId String
   month   Int

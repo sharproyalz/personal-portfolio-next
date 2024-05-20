@@ -7,51 +7,81 @@ import { schemas } from "~/zod-schemas";
 import { useRouter } from "next/navigation";
 import { api } from "~/trpc/react";
 import { toast } from "sonner";
+import { CldImage } from "next-cloudinary";
+import {
+  OnSuccessUpload,
+  ResourceType,
+  UploadButton,
+} from "~/components/upload-button";
 
 type Inputs = z.infer<typeof schemas.blog.create>;
 
 export function BlogForm() {
-  const [text, setText] = useState(``);
   const router = useRouter();
   const blogForm = useForm<Inputs>();
+  const date = new Date();
 
   const addBlog = api.blog.create.useMutation({
     onSuccess: async ({ id }) => {
-      toast.success("✔️ Banner has been added.");
-      console.log("✔️ Banner has been added.");
-      await router.push(`/admin/carousel-images`);
+      toast.success("✔️ Article has been created.");
+      console.log("✔️ Article has been created.");
+      await router.push(`/admin/blogs`);
     },
   });
 
-  // const onSuccessUpload: OnSuccessUpload = (result) => {
-  //   carouselImageForm.setValue('image', result.info?.secure_url ?? '');
-  //   carouselImageForm.setValue('imageId', result.info?.public_id ?? '');
-  // };
+  const onSuccessUpload: OnSuccessUpload = (result) => {
+    blogForm.setValue("image", result.info?.secure_url ?? "");
+    blogForm.setValue("imageId", result.info?.public_id ?? "");
+  };
 
-  // const onSubmit: SubmitHandler<Inputs> = (values) => {
-  //   addCarouselImage.mutate(values);
-  //   console.log(values);
-  // };
+  const onSubmit: SubmitHandler<Inputs> = (values) => {
+    addBlog.mutate({
+      ...values,
+      year: date.getFullYear(),
+      month: date.getMonth() + 1,
+    });
+    console.log({
+      ...values,
+      year: date.getFullYear(),
+      month: date.getMonth() + 1,
+    });
+  };
 
   return (
     <>
-      <form className="mx-auto max-w-screen-lg px-12">
+      <div className="mx-auto max-w-screen-lg p-12">
         <div className="mb-[2rem] text-center text-[3rem] text-gray">
           Create Blog
         </div>
-        <div className="flex flex-col gap-8">
+        <form
+          className="flex flex-col gap-8"
+          onSubmit={blogForm.handleSubmit(onSubmit, (err) => console.log(err))}
+        >
           {/* Image */}
-          <div className="flex w-full flex-col gap-4">
-            <div className="flex h-80 w-full items-center justify-center text-2xl dark:bg-card">
-              Your article banner
-            </div>
-            <label
-              htmlFor="image"
-              className="w-full rounded-lg border border-secondary px-[1rem] py-[0.5rem] text-center font-bold hover:bg-secondary hover:text-white active:scale-95 dark:text-gray"
+          <div className="flex flex-col  items-center gap-4">
+            {blogForm.watch("imageId") ? (
+              <div className="object-fit mx-auto flex h-80 w-[56rem]">
+                <CldImage
+                  width="896"
+                  height="896"
+                  src={blogForm.watch("imageId") ?? ""}
+                  alt="Article Banner"
+                  className=""
+                />
+              </div>
+            ) : (
+              <div className="flex h-80 w-[56rem] items-center justify-center text-2xl dark:bg-card">
+                Your article banner
+              </div>
+            )}
+            <UploadButton
+              className="w-full rounded-lg border border-secondary p-4 hover:bg-secondary hover:text-white"
+              folder="article-banner"
+              resourceType={ResourceType.IMAGE}
+              onSuccess={onSuccessUpload}
             >
-              Upload Image
-            </label>
-            <input type="file" name="image" id="image" className="hidden" />
+              Upload
+            </UploadButton>
           </div>
 
           {/* Title */}
@@ -60,27 +90,32 @@ export function BlogForm() {
               Title
             </label>
             <textarea
-              name="blog-title"
               id="blog-title"
               placeholder="Type your article title here"
               className="w-full p-4 text-2xl font-bold text-black"
+              {...blogForm.register("title")}
             ></textarea>
           </div>
 
           {/* Tags */}
-          <div>
+          {/* <div>
             <div className="font-bold text-gray">Tags</div>
             <div className="flex gap-8">
               {Array.from({ length: 3 }).map((arr, arrIdx) => (
                 <div key={arrIdx} className="flex gap-2">
-                  <input type="checkbox" name="sharp" id="" />
-                  <label htmlFor="blog-title" className="">
+                  <input
+                    type="checkbox"
+                    id="blog-tag"
+                    {...blogForm.register("blogTag.name")}
+                    value="Improvement"
+                  />
+                  <label htmlFor="blog-tag" className="">
                     Improvement
                   </label>
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Article */}
           <div>
@@ -88,13 +123,11 @@ export function BlogForm() {
               Article
             </label>
             <textarea
-              name=""
               id=""
               rows={10}
-              value={text}
               placeholder="Type your article here"
-              onChange={(e) => setText(e.target.value)}
               className="w-full p-4 text-black "
+              {...blogForm.register("article")}
             ></textarea>
           </div>
 
@@ -105,8 +138,8 @@ export function BlogForm() {
           >
             Create
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </>
   );
 }
