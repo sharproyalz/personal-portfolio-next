@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Toaster } from "sonner";
 import { Footer } from "~/components/footer";
 import Navigation from "~/components/navigation";
 import "~/styles/globals.css";
+import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata: Metadata = {
   title: "Personal Portfolio | Vonn Pactol",
@@ -16,9 +18,13 @@ export default function RootLayout({
   return (
     // Remove 'dark' to switch on light mode
     <html lang="en" className="dark">
-      <body className="bg-[#ffffff] text-[12px]  md:text-[16px] dark:bg-[#111111] dark:text-[#999999]">
-        {children}
-      </body>
+      <TRPCReactProvider>
+        <body className="bg-[#ffffff] text-[12px]  md:text-[16px] dark:bg-[#111111] dark:text-[#999999]">
+          {children}
+
+          <Toaster />
+        </body>
+      </TRPCReactProvider>
     </html>
   );
 }

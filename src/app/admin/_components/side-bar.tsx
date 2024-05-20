@@ -13,8 +13,8 @@ export function SideBar() {
             <Link className={``} href={`/admin/blogs`}>
               <div
                 className={`${
-                  pathname === "/admin/blogs" ? "bg-primary text-white" : ""
-                } w-full rounded-lg p-4 hover:bg-primary hover:text-white dark:text-gray`}
+                  pathname === "/admin/blogs" ? "bg-card text-white" : ""
+                } w-full rounded-lg p-4 hover:text-white dark:hover:bg-card dark:hover:text-gray`}
               >
                 Blogs
               </div>
@@ -25,8 +25,8 @@ export function SideBar() {
             <Link href={`/admin/projects`}>
               <div
                 className={`${
-                  pathname === "/admin/projects" ? "bg-primary text-white" : ""
-                } w-full rounded-lg p-4 hover:bg-primary hover:text-white dark:text-gray`}
+                  pathname === "/admin/projects" ? "bg-card text-white" : ""
+                } w-full rounded-lg p-4 hover:text-white dark:hover:bg-card dark:hover:text-gray`}
               >
                 Projects
               </div>
@@ -37,8 +37,8 @@ export function SideBar() {
             <Link href={`/admin/contacts`}>
               <div
                 className={`${
-                  pathname === "/admin/contacts" ? "bg-primary text-white" : ""
-                } w-full rounded-lg p-4 hover:bg-primary hover:text-white dark:text-gray`}
+                  pathname === "/admin/contacts" ? "bg-card text-white" : ""
+                } w-full rounded-lg p-4 hover:text-white dark:hover:bg-card dark:hover:text-gray`}
               >
                 Contacts
               </div>

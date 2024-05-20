@@ -5,6 +5,8 @@ import { z } from "zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { schemas } from "~/zod-schemas";
 import { useRouter } from "next/navigation";
+import { api } from "~/trpc/react";
+import { toast } from "sonner";
 
 type Inputs = z.infer<typeof schemas.blog.create>;
 
@@ -12,6 +14,24 @@ export function BlogForm() {
   const [text, setText] = useState(``);
   const router = useRouter();
   const blogForm = useForm<Inputs>();
+
+  const addBlog = api.blog.create.useMutation({
+    onSuccess: async ({ id }) => {
+      toast.success("✔️ Banner has been added.");
+      console.log("✔️ Banner has been added.");
+      await router.push(`/admin/carousel-images`);
+    },
+  });
+
+  // const onSuccessUpload: OnSuccessUpload = (result) => {
+  //   carouselImageForm.setValue('image', result.info?.secure_url ?? '');
+  //   carouselImageForm.setValue('imageId', result.info?.public_id ?? '');
+  // };
+
+  // const onSubmit: SubmitHandler<Inputs> = (values) => {
+  //   addCarouselImage.mutate(values);
+  //   console.log(values);
+  // };
 
   return (
     <>
