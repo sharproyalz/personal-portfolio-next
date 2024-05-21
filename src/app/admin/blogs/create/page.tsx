@@ -1,5 +1,5 @@
 import { BlogForm } from "./_components/form";
 
-export default function CreateProject() {
+export default function CreateBlog() {
   return <BlogForm />;
 }
