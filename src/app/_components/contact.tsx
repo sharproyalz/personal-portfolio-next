@@ -2,36 +2,31 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
+import { OnSuccessUpload } from "~/components/upload-button";
+import { api } from "~/trpc/react";
+import { schemas } from "~/zod-schemas";
+
+type Inputs = z.infer<typeof schemas.contact.send>;
 
 export function ContactSection() {
-  const host = "/api/blog";
-  const [name,setName] = useState("")
-  const [email,setEmail] = useState("")
-  const [message,setMessage] = useState("")
-  const router = useRouter()
-  const sendmessage = async () => {
-    try {
-      const messageResponse = await fetch(`${host}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+  const router = useRouter();
+  const sendMessageForm = useForm<Inputs>();
 
-        body: JSON.stringify({
-          image: "",
-          imageId: "",
-          month: 1,
-          year: 2024,
-          title: "Sample Project",
-        }),
-      });
+  const sendMessage = api.contact.send.useMutation({
+    onSuccess: async ({ id }) => {
+      toast.success("✔️ Message has been sent.");
+      console.log("✔️ Message has been sent.");
+    },
+  });
 
-      const messageData = await messageResponse.json();
-      console.log("New message:", messageData);
-    } catch (error) {
-      console.error("Error fetching message:", error);
-    }
+  const onSubmit: SubmitHandler<Inputs> = (values) => {
+    sendMessage.mutate(values);
+    console.log(values);
   };
+
   return (
     <>
       <section id="contact" className="flex px-4 py-[1rem] md:px-12 ">
@@ -44,19 +39,22 @@ export function ContactSection() {
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
           </div>
 
-          <div className="mt-[4rem] flex flex-col gap-[1rem]">
+          <form
+            className="mt-[4rem] flex flex-col gap-[1rem]"
+            onSubmit={sendMessageForm.handleSubmit(onSubmit, (err) =>
+              console.log(err),
+            )}
+          >
             <div className="flex flex-col gap-[0.5rem]">
               <label htmlFor="name" className="text-xs font-bold md:text-base">
                 Name
               </label>
               <input
                 type="text"
-                name="name"
                 id="name"
                 placeholder="Your name"
-                className="rounded-md border border-primary p-[0.5rem] text-[1rem] md:text-[1.5rem] dark:bg-card dark:text-gray dark:outline-none dark:focus:outline-gray"
-                onChange={(e)=> setName(e.target.value)}
-                value={name}
+                className="rounded-md border border-primary p-[0.5rem] text-[1rem] dark:bg-card dark:text-gray dark:outline-none dark:focus:outline-gray md:text-[1.5rem]"
+                {...sendMessageForm.register("name")}
               />
             </div>
 
@@ -66,13 +64,11 @@ export function ContactSection() {
               </label>
               <input
                 type="email"
-                name="email"
                 id="email"
                 placeholder="your.email@example.com"
-                className="rounded-md border border-primary p-[0.5rem] text-[1rem] md:text-[1.5rem] dark:bg-card
-                dark:text-gray dark:outline-none dark:focus:outline-gray"
-                onChange={(e)=> setEmail(e.target.value)}
-                value={email}
+                className="rounded-md border border-primary p-[0.5rem] text-[1rem] dark:bg-card dark:text-gray
+                dark:outline-none dark:focus:outline-gray md:text-[1.5rem]"
+                {...sendMessageForm.register("email")}
               />
             </div>
 
@@ -84,31 +80,24 @@ export function ContactSection() {
                 Message
               </label>
               <textarea
-                name="message"
                 id="message"
                 placeholder="Your message here"
                 rows={3}
-                className="rounded-md border border-primary p-[0.5rem] text-[1rem] md:text-[1.5rem] dark:bg-card
-                dark:text-gray dark:outline-none dark:focus:outline-gray"
-                onChange={(e)=> setMessage(e.target.value)}
-                value={message}
+                className="rounded-md border border-primary p-[0.5rem] text-[1rem] dark:bg-card dark:text-gray
+                dark:outline-none dark:focus:outline-gray md:text-[1.5rem]"
+                {...sendMessageForm.register("message")}
               ></textarea>
             </div>
 
             <div className="flex w-full justify-center">
               <button
-                type="button"
-                onClick={() => {
-                  if(name === "Vonn" &&email === "Sharp"){
-                    router.push('/blog')
-                  }
-                }}
+                type="submit"
                 className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
               >
                 Send message
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
     </>

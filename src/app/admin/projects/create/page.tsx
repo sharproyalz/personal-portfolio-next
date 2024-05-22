@@ -129,6 +129,7 @@ export default function CreateProjectPage() {
               ))}
             </div>
           </div> */}
+          <ToggleButton />
 
           <div>
             <label htmlFor="project-start-date" className="font-bold text-gray">
