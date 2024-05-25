@@ -9,7 +9,14 @@ export const projectRouter = createTRPCRouter({
   create: publicProcedure
     .input(schemas.project.create)
     .mutation(({ input, ctx }) => {
-      return ctx.db.project.create({ data: input });
+      return ctx.db.project.create({
+        data: {
+          ...input,
+          projectTags: {
+            create: input.projectTags,
+          },
+        },
+      });
     }),
 
   get: publicProcedure.input(schemas.project.get).query(({ input, ctx }) => {
@@ -17,6 +24,6 @@ export const projectRouter = createTRPCRouter({
   }),
 
   getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.db.project.findMany();
+    return ctx.db.project.findMany({ include: { projectTags: true } });
   }),
 });

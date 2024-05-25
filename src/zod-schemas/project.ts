@@ -11,10 +11,11 @@ export const projectSchemas = {
     monthEnd: z.number().int().optional(),
     yearEnd: z.number().int().optional(),
     projectTags: z
-      .object({
-        id: z.string(),
-        name: z.string(),
-      })
+      .array(
+        z.object({
+          name: z.string(),
+        }),
+      )
       .optional(),
   }),
 

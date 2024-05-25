@@ -32,20 +32,21 @@ model BlogTag {
 }
 
 model Project {
-  id         String       @id @default(cuid())
-  title      String
-  monthStart Int
-  yearStart  Int
-  monthEnd   Int?
-  yearEnd    Int?
-  image      String
-  imageId    String
-  tags       ProjectTag[]
+  id          String       @id @default(cuid())
+  title       String
+  monthStart  Int
+  yearStart   Int
+  monthEnd    Int?
+  yearEnd     Int?
+  image       String
+  imageId     String
+  projectTags ProjectTag[]
 }
 
 model ProjectTag {
-  id        String   @id @default(cuid())
-  name      String
+  id   String @id @default(cuid())
+  name String
+
   project   Project? @relation(fields: [projectId], references: [id])
   projectId String?
 }

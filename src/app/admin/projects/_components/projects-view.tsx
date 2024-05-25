@@ -53,7 +53,7 @@ export function ProjectsView() {
               </div>
 
               <div className="">
-                Next.js, TypeScript, Tailwind, tRPC, Postgres
+                {project.projectTags.map((tag) => tag.name).join(",")}
               </div>
             </Link>
           ))}

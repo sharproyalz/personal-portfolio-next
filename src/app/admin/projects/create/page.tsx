@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { z } from "zod";
-import { useForm, type SubmitHandler } from "react-hook-form";
+import { useFieldArray, useForm, type SubmitHandler } from "react-hook-form";
 import { schemas } from "~/zod-schemas";
 import { useRouter } from "next/navigation";
 import { api } from "~/trpc/react";
@@ -29,6 +28,11 @@ export default function CreateProjectPage() {
       yearEnd: 0,
       monthEnd: 0,
     },
+  });
+
+  const { fields, append, remove } = useFieldArray({
+    control: projectForm.control,
+    name: "projectTags",
   });
 
   const addProject = api.project.create.useMutation({
@@ -111,25 +115,32 @@ export default function CreateProjectPage() {
           </div>
 
           {/* Tags */}
-          {/* <div>
+          <div>
             <div className="font-bold text-gray">Tags</div>
-            <div className="flex gap-8">
-              {Array.from({ length: 3 }).map((arr, arrIdx) => (
-                <div key={arrIdx} className="flex gap-2">
-                  <input
-                    type="checkbox"
-                    id="project-tag"
-                    {...projectForm.register("projectTag.name")}
-                    value="Improvement"
-                  />
+            {fields.map((field, index) => (
+              <div key={field.id} className="flex gap-8 ">
+                <div className="flex gap-2">
                   <label htmlFor="project-tag" className="">
                     Improvement
                   </label>
+                  <input
+                    type="textbox"
+                    id="project-tag"
+                    {...projectForm?.register(`projectTags.${index}.name`)}
+                    className="text-black"
+                  />
                 </div>
-              ))}
-            </div>
-          </div> */}
-          <ToggleButton />
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={() => {
+                append({ name: "" });
+              }}
+            >
+              ASD
+            </button>
+          </div>
 
           <div>
             <label htmlFor="project-start-date" className="font-bold text-gray">
