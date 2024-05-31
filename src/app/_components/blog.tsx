@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { truncateWord } from "~/utils/truncateWords";
+import { truncateWord } from "~/utils/truncate-word";
 
 export function BlogSection() {
   return (
@@ -8,7 +8,7 @@ export function BlogSection() {
       <section id="blog" className="mt-[4rem] flex px-4 md:px-12 ">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[2rem] md:text-[3rem] dark:text-gray">
+            <div className="my-[1rem] text-[2rem] dark:text-gray md:text-[3rem]">
               Blog
             </div>
             <div className="text-[1rem] md:text-[1.5rem]">
@@ -19,35 +19,40 @@ export function BlogSection() {
           </div>
 
           <div className="mt-[5rem] flex flex-col items-center justify-between gap-8 lg:flex-row lg:items-stretch">
-            <div className="w-full rounded-2xl bg-gray p-4 lg:w-[24rem] dark:bg-card ">
-              <Image
-                src={`/article-banner/summary-portfolio.png`}
-                alt="Summary Portfolio Banner"
-                width={800}
-                height={800}
-                className="w-full rounded-md"
-              />
+            <div className="w-[22rem] rounded-2xl bg-gray p-4 dark:bg-card ">
+              <div className="flex h-[12rem] w-full object-fill lg:w-[20rem]">
+                <Image
+                  src={`/article-banner/summary-portfolio.png`}
+                  alt="Summary Portfolio Banner"
+                  width={320}
+                  height={192}
+                  className="rounded-md"
+                />
+              </div>
 
               {/* Title for Medium Screen */}
-              <div className="mt-[0.5rem] hidden text-[2rem] md:block dark:text-gray">
+              <div
+                className={`${"Summary of My Digital Career: A Personal Portfolio Website".length > 30 ? "text-xl" : "text-2xl"} mt-[0.5rem] hidden dark:text-gray md:block`}
+              >
+                Summary of My Digital Career: A Personal Portfolio Website
+              </div>
+
+              {/* <div className="mt-[0.5rem] hidden text-[2rem] dark:text-gray md:block">
                 {truncateWord(
                   "Summary of My Digital Career: A Personal Portfolio Website",
                 )}
-              </div>
+              </div> */}
 
               {/* Title for Mobile Screen */}
-              <div className="mt-[0.5rem] block text-[1rem] md:hidden dark:text-gray">
-                Summary of My Digital Career: A Personal Portfolio Website
-              </div>
 
               <div className="my-[1rem]">April 2024</div>
 
               {/* Tags */}
               <div className="mb-[0.5rem] flex gap-[0.5rem]">
-                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs md:text-base dark:text-black">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base">
                   Improvement
                 </div>
-                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs md:text-base dark:text-black">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base">
                   Next.js
                 </div>
               </div>
@@ -64,22 +69,21 @@ export function BlogSection() {
               </div>
             </div>
 
-            <div className="w-full rounded-2xl bg-gray p-4 lg:w-[24rem] dark:bg-card">
-              <Image
-                src={`/article-banner/sharpie-banner.png`}
-                alt="Sharpie Banner"
-                width={800}
-                height={800}
-                className="w-full rounded-md"
-              />
-
-              {/* Title for Medium Screen */}
-              <div className="mt-[0.5rem] hidden text-[2rem] md:block dark:text-gray">
-                {truncateWord("My First Full-stack Website: Sharpie")}
+            <div className="w-[22rem] rounded-2xl bg-gray p-4 dark:bg-card">
+              <div className="flex h-[12rem] w-full object-fill lg:w-[20rem]">
+                <Image
+                  src={`/article-banner/sharpie-banner.png`}
+                  alt="Sharpie Banner"
+                  width={320}
+                  height={192}
+                  className="rounded-md"
+                />
               </div>
 
-              {/* Title for Mobile Screen */}
-              <div className="mt-[0.5rem] text-[1rem] md:hidden dark:text-gray">
+              {/* Title for Medium Screen */}
+              <div
+                className={`${"My First Full-stack Website: Sharpie".length > 40 ? "text-xl" : "My First Full-stack Website: Sharpie".length > 25 ? "text-2xl" : "text-3xl"} mt-[0.5rem] hidden dark:text-gray md:block`}
+              >
                 My First Full-stack Website: Sharpie
               </div>
 
@@ -87,10 +91,10 @@ export function BlogSection() {
 
               {/* Tags */}
               <div className="mb-[0.5rem] flex gap-[0.5rem]">
-                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs md:text-base dark:text-black">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base">
                   Improvement
                 </div>
-                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs md:text-base dark:text-black">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base">
                   Next.js
                 </div>
               </div>
@@ -108,24 +112,27 @@ export function BlogSection() {
               </div>
             </div>
 
-            <div className="w-full rounded-2xl bg-gray p-4 lg:w-[24rem] dark:bg-card">
-              <Image
-                src={`/article-banner/leetcode-banner.png`}
-                alt="Leetcode Banner"
-                width={800}
-                height={800}
-                className="w-full rounded-md"
-              />
+            <div className="w-[22rem] rounded-2xl bg-gray p-4 dark:bg-card">
+              <div className="flex h-[12rem] w-full object-fill lg:w-[20rem]">
+                <Image
+                  src={`/article-banner/leetcode-banner.png`}
+                  alt="Leetcode Banner"
+                  width={320}
+                  height={192}
+                  className="rounded-md"
+                />
+              </div>
 
               {/* Title for Medium Screen */}
-              <div className="mt-[0.5rem] hidden text-[1.5rem] md:block md:text-[2rem] dark:text-gray">
-                {truncateWord(
-                  "Enhancing My Coding Skills: My Journey Through 28 Days of LeetCode Problem Solving",
-                )}
+              <div
+                className={`mt-[0.5rem] hidden h-[64px] overflow-hidden overflow-ellipsis text-2xl dark:text-gray md:block`}
+              >
+                Enhancing My Coding Skills: My Journey Through 28 Days of
+                LeetCode Problem Solving
               </div>
 
               {/* Title for Mobile Screen */}
-              <div className="mt-[0.5rem] block text-[1rem] md:hidden dark:text-gray">
+              <div className="mt-[0.5rem] block text-[1rem] dark:text-gray md:hidden">
                 Enhancing My Coding Skills: My Journey Through 28 Days of
                 LeetCode Problem Solving
               </div>
@@ -133,10 +140,10 @@ export function BlogSection() {
 
               {/* Tags */}
               <div className="mb-[0.5rem] flex gap-[0.5rem]">
-                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs md:text-base dark:text-black">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base">
                   Improvement
                 </div>
-                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs md:text-base dark:text-black">
+                <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base">
                   JavaScript
                 </div>
               </div>

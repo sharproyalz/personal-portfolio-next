@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { api } from "~/trpc/react";
 import { getMonthName } from "~/utils/get-month-name";
-import { truncateWord } from "~/utils/truncateWords";
+import { truncateWord } from "~/utils/truncate-word";
 
 export function BlogsView() {
   const getBlogsQuery = api.blog.getAll.useQuery();

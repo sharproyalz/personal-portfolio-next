@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { truncateWord } from "~/utils/truncateWords";
+import { truncateWord } from "~/utils/truncate-word";
 
 export function BlogsSection() {
   return (
     <section className="flex px-12 py-[1rem]">
       <div className="mx-auto my-0 max-w-screen-xl px-12">
-        <div className="mb-[1rem] text-center text-[3rem] dark:text-gray">Blogs</div>
+        <div className="mb-[1rem] text-center text-[3rem] dark:text-gray">
+          Blogs
+        </div>
         <div className="mt-[5rem] flex flex-wrap justify-between gap-8">
-          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray p-4 dark:bg-card">
             <Image
               src={`/article-banner/sharpie-banner.png`}
               alt="Sharpie Banner"
@@ -25,10 +27,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 Improvement
               </div>
-              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 Next.js
               </div>
             </div>
@@ -46,7 +48,7 @@ export function BlogsSection() {
             </div>
           </div>
 
-          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray p-4 dark:bg-card">
             <Image
               src={`/article-banner/leetcode-banner.png`}
               alt="Leetcode Banner"
@@ -65,10 +67,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 Improvement
               </div>
-              <div className="w-fit rounded-2xl bg-white dark:text-black px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 JavaScript
               </div>
             </div>
@@ -86,7 +88,7 @@ export function BlogsSection() {
             </div>
           </div>
 
-          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray p-4 dark:bg-card">
             <Image
               src={`/article-banner/react-banner.png`}
               alt="React Banner"
@@ -105,10 +107,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 Tutorial
               </div>
-              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 JavaScript
               </div>
             </div>
@@ -126,7 +128,7 @@ export function BlogsSection() {
             </div>
           </div>
 
-          <div className="w-[20rem] rounded-2xl bg-gray dark:bg-card p-4">
+          <div className="w-[20rem] rounded-2xl bg-gray p-4 dark:bg-card">
             <Image
               src={`/article-banner/react-banner.png`}
               alt="React Banner"
@@ -145,10 +147,10 @@ export function BlogsSection() {
 
             {/* Tags */}
             <div className="mb-[0.5rem] flex gap-[0.5rem]">
-              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 Tutorial
               </div>
-              <div className="dark:text-black w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem]">
+              <div className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] dark:text-black">
                 JavaScript
               </div>
             </div>

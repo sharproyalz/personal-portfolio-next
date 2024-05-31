@@ -23,6 +23,8 @@ export default function RootLayout({
           {children}
 
           <Toaster />
+
+          <Footer />
         </body>
       </TRPCReactProvider>
     </html>

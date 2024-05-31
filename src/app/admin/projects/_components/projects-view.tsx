@@ -5,7 +5,7 @@ import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
 import { api } from "~/trpc/react";
-import { truncateWord } from "~/utils/truncateWords";
+import { truncateWord } from "~/utils/truncate-word";
 
 export function ProjectsView() {
   const getProjectsQuery = api.project.getAll.useQuery();
