@@ -74,3 +74,15 @@
     @apply bg-background text-foreground;
   }
 } */
+
+
+.reveal {
+  transition: all 1s ease;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
