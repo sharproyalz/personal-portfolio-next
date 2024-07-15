@@ -39,9 +39,9 @@ export function Article() {
       </div>
 
       <div className="my-[1.5rem]">
-        You may be wondering why I uploaded it here and not on LinkedIn. It's
-        because I've started adding all of my blogs to my personal portfolio.
-        You can check them out on my{" "}
+        You may be wondering why I uploaded it here and not on LinkedIn.
+        It&apos;s because I&apos;ve started adding all of my blogs to my
+        personal portfolio. You can check them out on my{" "}
         <Link
           href={`/#blog`}
           target="_blank"
@@ -54,7 +54,7 @@ export function Article() {
 
       <div className="my-[1.5rem]">
         Have you noticed the UI of my article? It may be familiar to some of
-        you, and that's because I replicated the Docusaurus UI. I find it
+        you, and that&apos;s because I replicated the Docusaurus UI. I find it
         awesome because of its margins that give elements room to breathe,
         making it easy to read. Additionally, there are some headers on the top
         right of where you are currently reading.
@@ -66,13 +66,14 @@ export function Article() {
         this is the result.
       </div>
       <div className="my-[1.5rem]">
-        In conclusion, reflecting on my career journey thus far, I'm pleased
-        with the progress and results achieved. However, I acknowledge that my
-        personal portfolio still has room for improvement. Moving forward, I'm
-        committed to addressing these issues and enhancing its functionality.
-        I'm excited to embark on the journey of transforming my portfolio into a
-        dynamic website, and I invite you to stay tuned for the upcoming updates
-        and improvements. Together, let's elevate my portfolio to new heights!
+        In conclusion, reflecting on my career journey thus far, I&apos;m
+        pleased with the progress and results achieved. However, I acknowledge
+        that my personal portfolio still has room for improvement. Moving
+        forward, I&apos;m committed to addressing these issues and enhancing its
+        functionality. I&apos;m excited to embark on the journey of transforming
+        my portfolio into a dynamic website, and I invite you to stay tuned for
+        the upcoming updates and improvements. Together, let&apos;s elevate my
+        portfolio to new heights!
       </div>
 
       <div className="my-[1.5rem]">
@@ -80,7 +81,7 @@ export function Article() {
         comment section of my LinkedIn post.
       </div>
       <div className="my-[1.5rem]">
-        So what's next for me? For now I want to commit three things:
+        So what&apos;s next for me? For now I want to commit three things:
       </div>
       <ol className="list-decimal">
         <li className="ms-4">

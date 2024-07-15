@@ -15,9 +15,9 @@ export function HeroSection() {
               I’m a Web Developer
             </div>
             <div className="mt-[1rem] text-justify text-[1rem] md:text-[1.5rem] ">
-              Hello there! I'm Vonn, a web developer here to make your online
-              dreams a reality. Whether it's creating sleek designs or ensuring
-              smooth user experiences, I've got you covered. Let's work together
+              Hello there! I&apos;m Vonn, a web developer here to make your online
+              dreams a reality. Whether it&apos;s creating sleek designs or ensuring
+              smooth user experiences, I&apos;ve got you covered. Let&apos;s work together
               to bring your vision to life on the web!
             </div>
 
