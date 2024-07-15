@@ -24,7 +24,7 @@ const config = {
         secondary: "#EE6C4D",
 
         // Neutral
-        gray: "#d9d9d9",
+        gray: "#e4e5f1",
         slight_gray: "#3D3B3B",
         dusty_gray: "#999999",
 

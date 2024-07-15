@@ -50,14 +50,16 @@ export default function Navigation({
             </li>
           </ul>
 
-          {/* Hire Me Button */}
-          <Link
-            href="https://www.linkedin.com/in/vonn-pactol-718a2a283/"
-            target="_blank"
-            className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95 md:px-[1.5rem]"
+          <button
+            type="button"
+            onClick={() => {
+              const htmlElement = document.querySelector("html");
+
+              htmlElement?.classList.toggle("dark");
+            }}
           >
-            Hire me
-          </Link>
+            Light / Dark mode
+          </button>
         </div>
       </nav>
     </>

@@ -42,7 +42,7 @@ export function ContactSection() {
 
           <div className="mt-[4rem] flex flex-col-reverse items-center gap-8 lg:flex-row lg:justify-between">
             <form
-              className="flex w-full max-w-[400px] flex-col gap-[1rem] rounded-md p-4 dark:bg-card"
+              className="flex w-full max-w-[400px] flex-col gap-[1rem] rounded-md bg-gray p-4 dark:bg-card"
               onSubmit={sendMessageForm.handleSubmit(onSubmit, (err) =>
                 console.log(err),
               )}
