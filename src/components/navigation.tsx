@@ -16,19 +16,16 @@ export default function Navigation({
     <>
       <nav className={`px-4 py-[1rem] md:px-12`}>
         <div className="flex items-center justify-between">
-          <button
+          {/* <button
             type="button"
             onClick={() => setIsOpen(true)}
             className="md:hidden"
           >
             <Menu />
-          </button>
+          </button> */}
 
           {/* Logo */}
-          <Link
-            href={`/`}
-            className="hidden h-[3rem] w-[3rem] rounded-full md:block"
-          >
+          <Link href={`/`} className="h-[3rem] w-[3rem] rounded-full">
             <Image
               src={`/sharp-royalz-logo.png`}
               alt="Sharp Royalz Logo"
