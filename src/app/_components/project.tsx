@@ -42,8 +42,6 @@ export function ProjectSection() {
 
             if (revealTop! < windowHeight - revealPoint) {
               reveal.current[i]?.classList.add("active");
-            } else {
-              reveal.current[i]?.classList.remove("active");
             }
           }
         }

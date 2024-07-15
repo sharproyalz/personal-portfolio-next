@@ -7,7 +7,7 @@ export function AboutSection() {
       <section id="about" className="mt-[4rem] flex px-4 md:px-12 ">
         <div className="mx-auto my-0 max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[2rem] md:text-[3rem] dark:text-gray">
+            <div className="my-[1rem] text-[2rem] dark:text-gray md:text-[3rem]">
               About
             </div>
             <div className="text-[1rem] md:text-[1.5rem]">
@@ -18,7 +18,7 @@ export function AboutSection() {
 
           <div className="mt-[5rem] flex  flex-col items-center justify-between lg:flex-row">
             <div className="w-full lg:w-[64%]">
-              <div className="text-[1.5rem] md:text-[2.5rem] dark:text-gray">
+              <div className="text-[1.5rem] dark:text-gray md:text-[2.5rem]">
                 Aspiring Full-stack Developer: Skills and Ambitions
               </div>
               <div className="mt-[1rem] h-[2px] w-[20%] bg-primary"></div>
@@ -48,7 +48,7 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="mt-[4rem] flex h-[28rem] w-[16rem] items-center rounded-2xl bg-primary md:mt-0">
+            <div className="mt-[4rem] flex h-[28rem] w-[16rem] items-center rounded-2xl bg-primary lg:mt-0">
               <div className="flex h-[26rem] w-[16rem] -translate-x-5 items-center justify-center rounded-2xl bg-gray dark:bg-card">
                 <Image
                   src={`/computer.png`}

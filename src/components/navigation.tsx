@@ -51,12 +51,13 @@ export default function Navigation({
           </ul>
 
           {/* Hire Me Button */}
-          <button
-            type="button"
+          <Link
+            href="https://www.linkedin.com/in/vonn-pactol-718a2a283/"
+            target="_blank"
             className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95 md:px-[1.5rem]"
           >
             Hire me
-          </button>
+          </Link>
         </div>
       </nav>
     </>
