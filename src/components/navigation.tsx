@@ -54,7 +54,7 @@ export default function Navigation({
           <Link
             href="https://www.linkedin.com/in/vonn-pactol-718a2a283/"
             target="_blank"
-            className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95 md:px-[1.5rem]"
+            className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95 md:px-[1.5rem]"
           >
             Hire me
           </Link>

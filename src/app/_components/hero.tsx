@@ -8,10 +8,10 @@ export function HeroSection() {
       <section className="flex items-center px-4 md:px-12">
         <div className="relative mx-auto my-0 flex max-w-screen-xl flex-col items-center justify-between px-4 lg:flex-row lg:px-12">
           <div className="w-full lg:w-[50%]">
-            <div className="text-[3rem] tracking-tighter md:text-[4rem] dark:text-gray">
+            <div className="text-[3rem] tracking-tighter dark:text-gray md:text-[4rem]">
               Hi, I am Vonn
             </div>
-            <div className="text-[3rem] tracking-tighter md:text-[4rem] dark:text-gray">
+            <div className="text-[3rem] tracking-tighter dark:text-gray md:text-[4rem]">
               I’m a Web Developer
             </div>
             <div className="mt-[1rem] text-justify text-[1rem] md:text-[1.5rem] ">
@@ -24,7 +24,7 @@ export function HeroSection() {
             <div className="mt-[1.5rem] ">
               <Link
                 href={`#about`}
-                className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95 md:px-[2rem] md:py-[1rem]"
+                className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95 md:px-[2rem] md:py-[1rem]"
               >
                 Learn more
               </Link>

@@ -100,7 +100,7 @@ export function ContactSection() {
               <div className="flex w-full justify-center">
                 <button
                   type="submit"
-                  className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
+                  className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95"
                 >
                   Send message
                 </button>

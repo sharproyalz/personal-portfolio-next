@@ -123,7 +123,7 @@ export function BlogSection() {
                 <div className="flex justify-end">
                   <Link
                     href={blog.blogLink}
-                    className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-bold text-white hover:bg-secondary/90 active:scale-95"
+                    className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-semibold text-white hover:bg-secondary/90 active:scale-95"
                     target="_blank"
                   >
                     Read article
@@ -137,7 +137,7 @@ export function BlogSection() {
             <Link
               href={`https://www.linkedin.com/in/vonn-pactol-718a2a283/recent-activity/articles/`}
               target="_blank"
-              className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-bold text-white hover:bg-primary/90 active:scale-95"
+              className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95"
             >
               View all
             </Link>
