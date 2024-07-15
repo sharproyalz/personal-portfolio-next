@@ -117,7 +117,7 @@ export function ProjectSection() {
               </div>
               <div className="flex h-[4rem] w-[4rem] items-center justify-center">
                 <Image
-                  src={`/tech-icons/tailwind.png`}
+                  src={`/tech-icons/tailwind.svg`}
                   alt={`Tailwind CSS Icon`}
                   width={48}
                   height={48}
