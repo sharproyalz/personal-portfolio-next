@@ -42,10 +42,10 @@ export function BlogSection() {
       "scroll",
       () => {
         if (reveal.current) {
-          for (let i = 0; i < blogs.length; i++) {
+          for (let i = 0; i < 3; i++) {
             const windowHeight = window.innerHeight;
             const revealTop = reveal.current[i]?.getBoundingClientRect().top;
-            const revealPoint = 100;
+            const revealPoint = 150;
 
             if (revealTop! < windowHeight - revealPoint) {
               reveal.current[i]?.classList.add("active");
@@ -80,7 +80,7 @@ export function BlogSection() {
                 key={blogIdx}
                 ref={(el) => {
                   if (el && reveal.current) {
-                    reveal.current[blogIdx] = el; // Store reference in the array at the specified index
+                    reveal.current[blogIdx] = el;
                   }
                 }}
                 className="reveal w-[22rem] rounded-2xl bg-gray p-4 dark:bg-card"

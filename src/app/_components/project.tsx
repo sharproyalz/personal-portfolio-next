@@ -1,13 +1,63 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 export function ProjectSection() {
+  const projects = [
+    {
+      title: "Capstone Project",
+      tags: "Next.js, TypeScript, Tailwind, tRPC, Postgres",
+      date: "October 2023 - January 2024",
+      projectLink: "https://sds-ss.vercel.app/",
+      imageLink: "/capstone-project-banner.png",
+    },
+    {
+      title: "Sharpie E-commerce",
+      tags: "Next.js, TypeScript, Tailwind, Postgres",
+      date: "March 2024",
+      projectLink: "https://sharpie-store.vercel.app/",
+      imageLink: "/sharpie-banner.png",
+    },
+    {
+      title: "Background Changer",
+      tags: "JavaScript",
+      date: "December 2023",
+      projectLink: "https://background-changer-one.vercel.app/",
+      imageLink: "/background-changer-banner.png",
+    },
+  ];
+  const reveal = useRef<Array<HTMLAnchorElement | null>>([]);
+
+  if (typeof window !== "undefined") {
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (reveal.current) {
+          for (let i = 0; i < 3; i++) {
+            const windowHeight = window.innerHeight;
+            const revealTop = reveal.current[i]?.getBoundingClientRect().top;
+            const revealPoint = 150;
+
+            if (revealTop! < windowHeight - revealPoint) {
+              reveal.current[i]?.classList.add("active");
+            } else {
+              reveal.current[i]?.classList.remove("active");
+            }
+          }
+        }
+      },
+      false,
+    );
+  }
+
   return (
     <>
       <section id="project" className="flex px-4 py-[1rem] md:px-12 ">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[2rem] md:text-[3rem] dark:text-gray">
+            <div className="my-[1rem] text-[2rem] dark:text-gray md:text-[3rem]">
               Project
             </div>
             <div className="text-[1rem] md:text-[1.5rem]">
@@ -16,72 +66,34 @@ export function ProjectSection() {
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
           </div>
 
-          <div className="mt-[5rem] flex flex-col justify-between gap-8 lg:flex-row">
-            <Link
-              href={`https://sds-ss.vercel.app/`}
-              target="_blank"
-              className="group flex w-full flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 lg:w-[24rem] dark:bg-card dark:hover:bg-card/80"
-            >
-              <div className="self-end text-xs">
-                October 2023 - January 2024
-              </div>
-              <Image
-                src={`/capstone-project-banner.png`}
-                alt={`Sharpie Banner`}
-                height={800}
-                width={800}
-                className="w-full"
-              />
-              <div className="text-[1rem] group-hover:text-primary group-hover:underline md:text-[2rem] dark:text-gray">
-                Capstone Project
-              </div>
+          <div className="mt-[5rem] flex flex-col items-center justify-between gap-8 lg:flex-row lg:items-stretch">
+            {projects.map((project, projectIdx) => (
+              <Link
+                key={projectIdx}
+                ref={(el) => {
+                  if (el && reveal.current) {
+                    reveal.current[projectIdx] = el;
+                  }
+                }}
+                href={project.projectLink}
+                target="_blank"
+                className="reveal group flex w-[22rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80 lg:w-[24rem]"
+              >
+                <div className="self-end text-xs">{project.date}</div>
+                <Image
+                  src={project.imageLink}
+                  alt={project.title}
+                  height={800}
+                  width={800}
+                  className="w-full"
+                />
+                <div className="text-[1rem] group-hover:text-primary group-hover:underline dark:text-gray md:text-[2rem]">
+                  {project.title}
+                </div>
 
-              <div className="">
-                Next.js, TypeScript, Tailwind, tRPC, Postgres
-              </div>
-            </Link>
-
-            <Link
-              href={`https://sharpie-store.vercel.app/`}
-              target="_blank"
-              className="group flex w-full flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 lg:w-[24rem] dark:bg-card dark:hover:bg-card/80"
-            >
-              <div className="self-end text-xs">March 2024</div>
-
-              <Image
-                src={`/sharpie-banner.png`}
-                alt={`Sharpie Banner`}
-                height={800}
-                width={800}
-                className="w-full"
-              />
-
-              <div className="text-[1rem] text-gray group-hover:text-primary group-hover:underline md:text-[2rem]">
-                Ecommerce
-              </div>
-
-              <div className="">Next.js, TypeScript, Tailwind, Postgres</div>
-            </Link>
-
-            <Link
-              href={`https://background-changer-one.vercel.app/`}
-              target="_blank"
-              className="group flex w-full flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 lg:w-[24rem] dark:bg-card dark:hover:bg-card/80"
-            >
-              <div className="self-end text-xs">December 2023</div>
-
-              <Image
-                src={`/background-changer-banner.png`}
-                alt={`Sharpie Banner`}
-                height={800}
-                width={800}
-                className="w-full"
-              />
-              <div className="text-[1rem] text-gray group-hover:text-primary group-hover:underline md:text-[2rem]">
-                Background Changer
-              </div>
-              <div className="">JavaScript</div>
-            </Link>
+                <div className="">{project.tags}</div>
+              </Link>
+            ))}
           </div>
 
           <div className="flex w-full justify-end">
