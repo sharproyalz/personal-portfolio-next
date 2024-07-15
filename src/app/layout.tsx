@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     // Remove 'dark' to switch on light mode
-    <html lang="en" className="dark">
+    <html lang="en" className="">
       <TRPCReactProvider>
         <body className="bg-[#fafafa] text-[12px]  dark:bg-[#111111] dark:text-[#999999] md:text-[16px]">
           {children}

@@ -1,14 +1,17 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navigation({
   setIsOpen = (isOpen: boolean) => {},
 }: {
   setIsOpen?: (isOpen: boolean) => void;
 }) {
+  const [isDark, setIsDark] = useState(false);
+
   return (
     <>
       <nav className={`px-4 py-[1rem] md:px-12`}>
@@ -52,13 +55,14 @@ export default function Navigation({
 
           <button
             type="button"
+            className="rounded-full bg-gray p-2 hover:bg-black/20 active:scale-95 dark:bg-card dark:text-white dark:hover:bg-white/20"
             onClick={() => {
+              setIsDark(!isDark);
               const htmlElement = document.querySelector("html");
-
               htmlElement?.classList.toggle("dark");
             }}
           >
-            Light / Dark mode
+            {isDark ? <Moon /> : <Sun />}
           </button>
         </div>
       </nav>
