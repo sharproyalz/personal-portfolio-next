@@ -19,6 +19,9 @@ export const blogRouter = createTRPCRouter({
   }),
 
   getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.db.blog.findMany();
+    return ctx.db.blog.findMany({
+      include: { tags: true },
+      orderBy: { date: "asc" },
+    });
   }),
 });

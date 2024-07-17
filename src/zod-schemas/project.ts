@@ -4,12 +4,10 @@ export const projectSchemas = {
   create: z.object({
     id: z.string().cuid().optional(),
     title: z.string(),
+    link: z.string(),
+    date: z.string(),
     image: z.string(),
     imageId: z.string(),
-    monthStart: z.number().int(),
-    yearStart: z.number().int(),
-    monthEnd: z.number().int().optional(),
-    yearEnd: z.number().int().optional(),
     projectTags: z
       .array(
         z.object({

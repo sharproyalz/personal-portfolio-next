@@ -7,8 +7,7 @@ export const blogSchemas = {
     article: z.string(),
     image: z.string(),
     imageId: z.string(),
-    month: z.number().int(),
-    year: z.number().int(),
+    date: z.string(),
 
     blogTag: z
       .object({

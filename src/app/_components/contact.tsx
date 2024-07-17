@@ -30,7 +30,7 @@ export function ContactSection() {
 
   return (
     <>
-      <section id="contact" className="flex px-4 py-[1rem] md:px-12 ">
+      <section id="contact" className="flex px-4 pb-8 pt-4 md:px-12 ">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
             <div className="my-[1rem] text-[3rem] dark:text-gray">Contact</div>

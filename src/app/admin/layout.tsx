@@ -6,9 +6,8 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex">
+    <div className="relative flex min-h-[100vh]">
       <SideBar />
-
       <main className="flex-1">{children}</main>
     </div>
   );
