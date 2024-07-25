@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { truncateWord } from "~/utils/truncate-word";
 
 export function BlogsSection() {
   return (
@@ -56,9 +55,8 @@ export function BlogsSection() {
             />
 
             <div className="mt-2 text-[2rem] dark:text-gray">
-              {truncateWord(
-                "Enhancing My Coding Skills: My Journey Through 28 Days of LeetCode Problem Solving",
-              )}
+              Enhancing My Coding Skills: My Journey Through 28 Days of LeetCode
+              Problem Solving
             </div>
 
             <div className="my-4">February 2024</div>
@@ -96,9 +94,8 @@ export function BlogsSection() {
             />
 
             <div className="mt-2 text-[2rem] dark:text-gray">
-              {truncateWord(
-                "JavaScript Fundamentals You Need Before Starting Your React Project",
-              )}
+              JavaScript Fundamentals You Need Before Starting Your React
+              Project
             </div>
 
             <div className="my-4">January 2024</div>
@@ -136,9 +133,8 @@ export function BlogsSection() {
             />
 
             <div className="mt-2 text-[2rem] dark:text-gray">
-              {truncateWord(
-                "JavaScript Fundamentals You Need Before Starting Your React Project",
-              )}
+              JavaScript Fundamentals You Need Before Starting Your React
+              Project
             </div>
 
             <div className="my-4">January 2024</div>
