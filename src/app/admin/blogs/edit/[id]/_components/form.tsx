@@ -204,7 +204,7 @@ export function EditBlogForm() {
           {/* Submit button */}
           <button
             type="submit"
-            className="w-full rounded-lg bg-primary px-[1rem] py-[0.5rem] text-center font-bold text-white hover:bg-primary/90 active:scale-95"
+            className="w-full rounded-lg bg-primary px-4 py-2 text-center font-bold text-white hover:bg-primary/90 active:scale-95"
           >
             Save
           </button>

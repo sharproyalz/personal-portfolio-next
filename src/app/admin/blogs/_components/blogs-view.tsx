@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { api } from "~/trpc/react";
 import { getMonthName } from "~/utils/get-month-name";
-import { truncateWord } from "~/utils/truncate-word";
 
 type Props = {
   initialData: (Blog & { blogTags: BlogTag[] })[];
@@ -17,11 +16,9 @@ export function BlogsView({ initialData }: Props) {
   const blogs = getBlogsQuery.data;
 
   return (
-    <section className="flex py-[1rem]">
+    <section className="flex py-4">
       <div className="w-full px-12">
-        <div className="mb-[1rem] text-center text-[3rem] dark:text-gray">
-          Blogs
-        </div>
+        <div className="mb-4 text-center text-[3rem] dark:text-gray">Blogs</div>
 
         <div className="mt-[5rem] flex w-full flex-wrap gap-8 ">
           <Link
@@ -49,14 +46,16 @@ export function BlogsView({ initialData }: Props) {
                 />
               </div>
 
-              <div className="mt-4 text-[2rem] dark:text-gray">
-                {truncateWord(blog.title)}
+              <div
+                className={`mt-4 hidden h-[64px] overflow-hidden text-2xl font-semibold dark:text-gray md:block`}
+              >
+                {blog.title}
               </div>
 
               <div className="mt-2 text-sm">{blog.date}</div>
 
               {/* Tags */}
-              <div className="mt-2 flex gap-[0.5rem]">
+              <div className="mt-2 flex gap-2">
                 {blog.blogTags.length
                   ? blog.blogTags.map((tag) => tag.name).join(",")
                   : "No tags"}

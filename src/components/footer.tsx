@@ -7,8 +7,8 @@ export function Footer() {
     <>
       <footer className="w-full bg-primary">
         <div className="mx-auto my-0 flex max-w-screen-xl flex-col items-center justify-between gap-4 px-12 py-[2rem] md:flex-row">
-          <div className="flex gap-[1rem] ">
-            <div className=" flex items-center gap-[1rem]">
+          <div className="flex gap-4 ">
+            <div className=" flex items-center gap-4">
               <Link
                 href={`https://github.com/sharproyalz`}
                 className="flex h-[2rem] w-[2rem] items-center justify-center rounded-sm text-white  hover:bg-primary hover:text-black"

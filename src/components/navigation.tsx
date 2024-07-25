@@ -14,7 +14,7 @@ export default function Navigation({
 
   return (
     <>
-      <nav className={`px-4 py-[1rem] md:px-12`}>
+      <nav className={`px-4 py-4 md:px-12`}>
         <div className="flex items-center justify-between">
           {/* <button
             type="button"

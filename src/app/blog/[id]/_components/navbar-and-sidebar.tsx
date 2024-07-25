@@ -14,7 +14,7 @@ export function NavBarAndSideBar() {
       <Navigation setIsOpen={setIsOpen} />
 
       <aside
-        className={`${isOpen ? "z-20" : "hidden"} fixed top-0 h-[100vh] w-[80%] border-r-[1px] bg-card p-4 text-[1.5rem] md:static md:col-span-1 md:block md:h-fit md:border-r-2 md:border-gray md:bg-transparent md:pe-[1rem]`}
+        className={`${isOpen ? "z-20" : "hidden"} fixed top-0 h-[100vh] w-[80%] border-r-[1px] bg-card p-4 text-[1.5rem] md:static md:col-span-1 md:block md:h-fit md:border-r-2 md:border-gray md:bg-transparent md:pe-4`}
       >
         <button
           type="button"
@@ -48,7 +48,7 @@ export function NavBarAndSideBar() {
           </li>
         </ul>
 
-        <div className="mb-[1rem] mt-[2rem] font-bold md:mt-0 dark:text-gray">
+        <div className="mb-4 mt-[2rem] font-bold dark:text-gray md:mt-0">
           All of my post
         </div>
         <div className="flex flex-col gap-4">

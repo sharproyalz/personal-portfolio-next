@@ -52,13 +52,13 @@ export function ProjectSection() {
 
   return (
     <>
-      <section id="project" className="flex px-4 py-[1rem] md:px-12 ">
+      <section id="project" className="flex px-4 py-4 md:px-12 ">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[2rem] dark:text-gray md:text-[3rem]">
+            <div className="my-4 text-[2rem] dark:text-gray md:text-[3rem]">
               Project
             </div>
-            <div className="text-[1rem] md:text-[1.5rem]">
+            <div className="text-4 md:text-[1.5rem]">
               A list of websites that I have developed.
             </div>
             <div className="mt-[1.5rem] h-[2px] w-[20%] bg-primary"></div>
@@ -75,7 +75,7 @@ export function ProjectSection() {
                 }}
                 href={project.projectLink}
                 target="_blank"
-                className="reveal group flex w-[22rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80 lg:w-[24rem]"
+                className="reveal group flex w-[22rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80 lg:w-[24rem]"
               >
                 <div className="self-end text-xs">{project.date}</div>
                 <Image
@@ -85,7 +85,7 @@ export function ProjectSection() {
                   width={800}
                   className="w-full"
                 />
-                <div className="text-[1rem] group-hover:text-primary group-hover:underline dark:text-gray md:text-[2rem]">
+                <div className="text-4 group-hover:text-primary group-hover:underline dark:text-gray md:text-[2rem]">
                   {project.title}
                 </div>
 
@@ -97,16 +97,16 @@ export function ProjectSection() {
           <div className="flex w-full justify-end">
             <Link
               href={`/projects`}
-              className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95"
+              className="mt-[3rem] rounded-lg bg-primary px-4 py-2 font-semibold text-white hover:bg-primary/90 active:scale-95"
             >
               View all
             </Link>
           </div>
 
           <div className="mt-[2rem] w-full justify-start">
-            <div className="text-[1rem] md:text-[1.5rem]">Technical skills</div>
+            <div className="text-4 md:text-[1.5rem]">Technical skills</div>
 
-            <div className="mt-[0.5rem] flex flex-wrap justify-around gap-[2rem] md:flex-nowrap md:justify-start">
+            <div className="mt-2 flex flex-wrap justify-around gap-[2rem] md:flex-nowrap md:justify-start">
               <div className="flex h-[4rem] w-[4rem] items-center justify-center">
                 <Image
                   src={`/tech-icons/next.png`}

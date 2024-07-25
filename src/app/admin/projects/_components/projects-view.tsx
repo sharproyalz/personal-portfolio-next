@@ -6,7 +6,6 @@ import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
 import { api } from "~/trpc/react";
-import { truncateWord } from "~/utils/truncate-word";
 
 type Props = {
   initialData: (Project & {
@@ -21,9 +20,9 @@ export function ProjectsView({ initialData }: Props) {
   const projects = getProjectsQuery.data;
 
   return (
-    <div className="flex py-[1rem]">
+    <div className="flex py-4">
       <div className="w-full px-12">
-        <div className="mb-[1rem] text-center text-[3rem] dark:text-gray">
+        <div className="mb-4 text-center text-[3rem] dark:text-gray">
           Projects
         </div>
 
@@ -42,7 +41,7 @@ export function ProjectsView({ initialData }: Props) {
               href={`https://sds-ss.vercel.app/`}
               key={project.id}
               target="_blank"
-              className="group flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group flex w-[24rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">{project.date}</div>
               <div className="object-fit mx-auto flex h-[12rem] w-[18rem]">
@@ -55,7 +54,9 @@ export function ProjectsView({ initialData }: Props) {
                 />
               </div>
 
-              <div className="text-[2rem] group-hover:text-primary group-hover:underline dark:text-gray">
+              <div
+                className={`mt-4 hidden h-[64px] overflow-hidden text-2xl font-semibold dark:text-gray md:block`}
+              >
                 {project.title}
               </div>
 

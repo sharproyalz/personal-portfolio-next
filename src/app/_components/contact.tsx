@@ -33,7 +33,7 @@ export function ContactSection() {
       <section id="contact" className="flex px-4 pb-8 pt-4 md:px-12 ">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[3rem] dark:text-gray">Contact</div>
+            <div className="my-4 text-[3rem] dark:text-gray">Contact</div>
             <div className="text-base md:text-[1.5rem]">
               Want to connect or make a project with me? Contact me below.
             </div>
@@ -42,7 +42,7 @@ export function ContactSection() {
 
           <div className="mt-[4rem] flex flex-col-reverse items-center gap-8 lg:flex-row lg:justify-between">
             <form
-              className="flex w-full max-w-[400px] flex-col gap-[1rem] rounded-md bg-gray p-4 dark:bg-card"
+              className="flex w-full max-w-[400px] flex-col gap-4 rounded-md bg-gray p-4 dark:bg-card"
               onSubmit={sendMessageForm.handleSubmit(onSubmit, (err) =>
                 console.log(err),
               )}
@@ -100,7 +100,7 @@ export function ContactSection() {
               <div className="flex w-full justify-center">
                 <button
                   type="submit"
-                  className="mt-[1rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95"
+                  className="mt-4 rounded-lg bg-primary px-4 py-2 font-semibold text-white hover:bg-primary/90 active:scale-95"
                 >
                   Send message
                 </button>

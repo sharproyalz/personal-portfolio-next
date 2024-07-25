@@ -4,15 +4,15 @@ import Link from "next/link";
 export function ProjectsSection() {
   return (
     <>
-      <section className="flex px-12 py-[1rem]">
+      <section className="flex px-12 py-4">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-12">
-          <div className="mb-[1rem] text-center text-[3rem]">Projects</div>
+          <div className="mb-4 text-center text-[3rem]">Projects</div>
 
           <div className="mt-[5rem] grid w-full grid-cols-3 gap-8">
             <Link
               href={`https://sharpie-store.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">March 2024</div>
 
@@ -34,7 +34,7 @@ export function ProjectsSection() {
             <Link
               href={`https://sds-ss.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">
                 October 2023 - January 2024
@@ -58,7 +58,7 @@ export function ProjectsSection() {
             <Link
               href={`https://css-position-playground.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">December 2023</div>
 
@@ -79,7 +79,7 @@ export function ProjectsSection() {
             <Link
               href={`https://background-changer-one.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">November 2023</div>
 
@@ -99,7 +99,7 @@ export function ProjectsSection() {
             <Link
               href={`https://scientific-calculator-navy.vercel.app/`}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group col-span-1 flex w-[24rem] flex-col gap-4 rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">September 2023</div>
               <Image

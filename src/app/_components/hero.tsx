@@ -14,23 +14,23 @@ export function HeroSection() {
             <div className="text-[3rem] tracking-tighter dark:text-gray md:text-[4rem]">
               I’m a Web Developer
             </div>
-            <div className="mt-[1rem] text-justify text-[1rem] md:text-[1.5rem] ">
-              Hello there! I&apos;m Vonn, a web developer here to make your online
-              dreams a reality. Whether it&apos;s creating sleek designs or ensuring
-              smooth user experiences, I&apos;ve got you covered. Let&apos;s work together
-              to bring your vision to life on the web!
+            <div className="text-4 mt-4 text-justify md:text-[1.5rem] ">
+              Hello there! I&apos;m Vonn, a web developer here to make your
+              online dreams a reality. Whether it&apos;s creating sleek designs
+              or ensuring smooth user experiences, I&apos;ve got you covered.
+              Let&apos;s work together to bring your vision to life on the web!
             </div>
 
             <div className="mt-[1.5rem] ">
               <Link
                 href={`#about`}
-                className="rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95 md:px-[2rem] md:py-[1rem]"
+                className="rounded-lg bg-primary px-4 py-2 font-semibold text-white hover:bg-primary/90 active:scale-95 md:px-[2rem] md:py-4"
               >
                 Learn more
               </Link>
             </div>
 
-            <div className="mt-[3rem] flex gap-[1rem]">
+            <div className="mt-[3rem] flex gap-4">
               <Link
                 href={`https://github.com/sharproyalz`}
                 className="flex h-[2rem] w-[2rem] items-center justify-center rounded-sm  hover:bg-primary hover:text-white"

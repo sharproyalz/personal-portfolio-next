@@ -54,7 +54,7 @@ export function Content({ initialData, content }: Props) {
   };
 
   return (
-    <article className="prose col-span-5 max-w-none px-[1rem] text-current md:col-span-3">
+    <article className="prose col-span-5 max-w-none px-4 text-current md:col-span-3">
       <div className="object-fit mx-auto flex h-[24rem] w-[64rem]">
         <CldImage
           width="800"
@@ -71,7 +71,7 @@ export function Content({ initialData, content }: Props) {
         {blog?.date} · {readingTime()} read
       </div>
 
-      <div className="mt-[1rem] flex items-center gap-[1rem]">
+      <div className="mt-4 flex items-center gap-4">
         <Image
           src={`/hero.png`}
           alt="Hero"

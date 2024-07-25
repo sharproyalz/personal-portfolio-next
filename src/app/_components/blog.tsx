@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { truncateWord } from "~/utils/truncate-word";
 
 export function BlogSection() {
   const blogs = [
@@ -62,10 +61,10 @@ export function BlogSection() {
       <section id="blog" className="mt-[4rem] flex px-4 md:px-12 ">
         <div className="mx-auto my-0 w-full max-w-screen-xl px-4 md:px-12">
           <div className="flex flex-col items-center justify-center">
-            <div className="my-[1rem] text-[2rem] dark:text-gray md:text-[3rem]">
+            <div className="my-4 text-[2rem] dark:text-gray md:text-[3rem]">
               Blog
             </div>
-            <div className="text-[1rem] md:text-[1.5rem]">
+            <div className="text-4 md:text-[1.5rem]">
               A list of published articles documenting my learning journey,
               including tutorials, improvements, and more.
             </div>
@@ -95,35 +94,35 @@ export function BlogSection() {
 
                 {/* Title for Medium Screen */}
                 <div
-                  className={`mt-[0.5rem] hidden h-[64px] overflow-hidden overflow-ellipsis text-2xl dark:text-gray md:block`}
+                  className={`mt-2 hidden h-[64px] overflow-hidden overflow-ellipsis text-2xl dark:text-gray md:block`}
                 >
                   {blog.blogTitle}
                 </div>
 
                 {/* Title for Mobile Screen */}
-                <div className="mt-[0.5rem] block text-[1rem] dark:text-gray md:hidden">
+                <div className="text-4 mt-2 block dark:text-gray md:hidden">
                   {blog.blogTitle}
                 </div>
-                <div className="my-[1rem]">{blog.date}</div>
+                <div className="my-4">{blog.date}</div>
 
                 {/* Tags */}
-                <div className="mb-[0.5rem] flex gap-[0.5rem]">
+                <div className="mb-2 flex gap-2">
                   {blog.tags.map((tag, tagIdx) => (
                     <div
                       key={tagIdx}
-                      className="w-fit rounded-2xl bg-white px-[1rem] py-[0.25rem] text-xs dark:text-black md:text-base"
+                      className="w-fit rounded-2xl bg-white px-4 py-[0.25rem] text-xs dark:text-black md:text-base"
                     >
                       {tag}
                     </div>
                   ))}
                 </div>
 
-                <div className="mb-[1rem] h-[2px] bg-white"></div>
+                <div className="mb-4 h-[2px] bg-white"></div>
 
                 <div className="flex justify-end">
                   <Link
                     href={blog.blogLink}
-                    className="w-fit rounded-2xl bg-secondary px-[1rem] py-[0.25rem] font-semibold text-white hover:bg-secondary/90 active:scale-95"
+                    className="w-fit rounded-2xl bg-secondary px-4 py-[0.25rem] font-semibold text-white hover:bg-secondary/90 active:scale-95"
                     target="_blank"
                   >
                     Read article
@@ -137,7 +136,7 @@ export function BlogSection() {
             <Link
               href={`https://www.linkedin.com/in/vonn-pactol-718a2a283/recent-activity/articles/`}
               target="_blank"
-              className="mt-[3rem] rounded-lg bg-primary px-[1rem] py-[0.5rem] font-semibold text-white hover:bg-primary/90 active:scale-95"
+              className="mt-[3rem] rounded-lg bg-primary px-4 py-2 font-semibold text-white hover:bg-primary/90 active:scale-95"
             >
               View all
             </Link>

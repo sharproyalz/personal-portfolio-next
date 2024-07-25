@@ -20,7 +20,7 @@ So what's next for me? For now I want to commit three things:
 - Build a web system.
 - Learn a new programming language.`;
   return (
-    <article className="col-span-5 px-[1rem] md:col-span-3 ">
+    <article className="col-span-5 px-4 md:col-span-3 ">
       <Image
         src={`/article-banner/summary-portfolio.png`}
         alt="Summary Portfolio Banner"
@@ -34,7 +34,7 @@ So what's next for me? For now I want to commit three things:
 
       <div className="mt-[1.5rem]">April 30, 2024 · 2 min read</div>
 
-      <div className="mt-[1rem] flex items-center gap-[1rem]">
+      <div className="mt-4 flex items-center gap-4">
         <Image
           src={`/hero.png`}
           alt="Hero"
