@@ -22,7 +22,7 @@ export function ContactTable() {
           A list of persons who wants to get in touch with you
         </TableCaption>
         <TableHeader>
-          <TableRow className="text-gray">
+          <TableRow className="dark:text-gray">
             <TableHead className="w-[20%]">Date</TableHead>
             <TableHead className="w-[20%]">Name</TableHead>
             <TableHead className="w-[20%]">Email</TableHead>
@@ -30,14 +30,22 @@ export function ContactTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {contacts?.map((contact) => (
-            <TableRow key={contact.id}>
-              <TableCell>{contact.date.toISOString().split("T")[0]}</TableCell>
-              <TableCell>{contact.name}</TableCell>
-              <TableCell>{contact.email}</TableCell>
-              <TableCell>{contact.message}</TableCell>
+          {contacts?.length ? (
+            contacts?.map((contact) => (
+              <TableRow key={contact.id}>
+                <TableCell>
+                  {contact.date.toISOString().split("T")[0]}
+                </TableCell>
+                <TableCell>{contact.name}</TableCell>
+                <TableCell>{contact.email}</TableCell>
+                <TableCell>{contact.message}</TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <TableRow className="text-center">
+              <TableCell colSpan={4}>There are currently no message.</TableCell>
             </TableRow>
-          ))}
+          )}
         </TableBody>
       </Table>
     </>

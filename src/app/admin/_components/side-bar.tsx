@@ -14,8 +14,8 @@ export function SideBar() {
     <>
       <aside className="hidden p-[2rem] shadow-md md:block md:w-72">
         <ul className="sticky top-[2rem]">
-          <li className="flex items-center justify-between">
-            <Link href={`/`} className="h-[3rem] w-[3rem] rounded-full">
+          <li className="mb-4 flex items-center justify-between">
+            <Link href={`/`} className="rounded-full">
               <Image
                 src={`/sharp-royalz-logo.png`}
                 alt="Sharp Royalz Logo"

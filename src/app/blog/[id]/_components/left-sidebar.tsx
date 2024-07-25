@@ -1,8 +1,23 @@
+"use client";
+
+import { Blog, BlogTag } from "@prisma/client";
 import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { api } from "~/trpc/react";
 
-export function LeftAside() {
+type Props = {
+  initialData: (Blog & {
+    blogTags: BlogTag[];
+  })[];
+};
+
+export function LeftAside({ initialData }: Props) {
+  const params = useParams();
+  const getBlogsQuery = api.blog.getAll.useQuery(undefined, { initialData });
+  const blogs = getBlogsQuery.data;
+
   return (
     <aside
       className={`fixed top-0 hidden h-[100vh] w-[80%] border-r-[1px] bg-card p-4 text-[1.5rem] md:static md:col-span-1 md:block md:h-fit md:border-r-2 md:border-gray md:bg-transparent md:pe-[1rem]`}
@@ -38,13 +53,25 @@ export function LeftAside() {
         </li>
       </ul>
 
-      <div className="mb-[1rem] mt-[2rem] font-bold md:mt-0 dark:text-gray">
+      <div className="mb-[1rem] mt-[2rem] font-bold dark:text-gray md:mt-0">
         All of my post
       </div>
       <div className="flex flex-col gap-4">
-        <div className="text-primary md:text-base">
-          Summary of My Digital Career: A Personal Portfolio Website
-        </div>
+        {blogs.map((blog) =>
+          params.id === blog.id ? (
+            <div key={blog.id} className="font-bold text-primary md:text-base">
+              {blog.title}
+            </div>
+          ) : (
+            <Link
+              key={blog.id}
+              href={`/blog/${blog.id}`}
+              className="hover:text-primary md:text-base"
+            >
+              {blog.title}
+            </Link>
+          ),
+        )}
       </div>
     </aside>
   );

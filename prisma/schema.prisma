@@ -9,24 +9,26 @@ generator client {
 }
 
 datasource db {
-  // provider = "postgresql"
-  provider = "sqlite"
+  provider = "postgresql"
+  // provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model Blog {
-  id      String    @id @default(cuid())
-  title   String
-  article String
-  image   String
-  imageId String
-  date    String
-  tags    BlogTag[]
+  id       String    @id @default(cuid())
+  title    String
+  content  String
+  date     String
+  link     String?
+  image    String
+  imageId  String
+  blogTags BlogTag[]
 }
 
 model BlogTag {
-  id     String  @id @default(cuid())
-  name   String
+  id   String @id @default(cuid())
+  name String
+
   blog   Blog?   @relation(fields: [blogId], references: [id])
   blogId String?
 }

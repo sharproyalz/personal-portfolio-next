@@ -30,7 +30,7 @@ export function ProjectsView({ initialData }: Props) {
         <div className="mt-[5rem] flex w-full flex-wrap gap-8 ">
           <Link
             href={`/admin/projects/create`}
-            className="flex h-[24rem] w-[24rem] items-center justify-center gap-4 rounded-2xl  bg-gray p-4 dark:bg-transparent dark:hover:bg-card dark:hover:text-gray"
+            className="flex h-[24rem] w-[24rem] items-center justify-center gap-4 rounded-2xl  bg-gray p-4 dark:bg-card dark:hover:text-gray"
           >
             Add
             <div>
@@ -42,7 +42,7 @@ export function ProjectsView({ initialData }: Props) {
               href={`https://sds-ss.vercel.app/`}
               key={project.id}
               target="_blank"
-              className="group col-span-1 flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
+              className="group flex w-[24rem] flex-col gap-[1rem] rounded-2xl bg-gray p-4 hover:bg-gray/80 dark:bg-card dark:hover:bg-card/80"
             >
               <div className="self-end text-xs">{project.date}</div>
               <div className="object-fit mx-auto flex h-[12rem] w-[18rem]">
